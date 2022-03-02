@@ -7,8 +7,6 @@ interface SpellItemProps {
 
 export const SpellItem = ({ spell }: SpellItemProps) => (
   <div>
-    {spell.id}
-    {spell.name}
-    {spell.description}
+    {spell.name} - {spell.title} - {spell.description}
   </div>
 );
