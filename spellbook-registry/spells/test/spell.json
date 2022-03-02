@@ -1,8 +1,12 @@
 {
-    "name": "Test",
+    "name": "test",
+    "title": "Test",
     "version": "0.1.0",
     "description": "Test item",
     "main": "test.sh",
-    "target": ["linux", "macos"],
+    "target": [
+        "linux",
+        "macos"
+    ],
     "author": "Test person"
 }

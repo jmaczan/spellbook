@@ -1,8 +1,12 @@
 {
-    "name": "Repeat.sh",
+    "name": "repeat-sh",
+    "title": "Repeat.sh",
     "version": "0.0.1",
     "description": "Repeat any shell command with interval",
     "main": "repeat.sh",
-    "target": ["linux", "bsd"],
+    "target": [
+        "linux",
+        "bsd"
+    ],
     "author": "Jedrzej Pawel Maczan <jedrzejpawel@maczan.pl>"
 }
