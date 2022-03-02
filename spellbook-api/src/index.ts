@@ -8,12 +8,13 @@ const spellsPath = path.join(path.resolve(__dirname, '../..'), '/spellbook-regis
 
 const getAllSpellsDirectories = () => fs.readdirSync(spellsPath);
 
-const getAllSpells = () => getAllSpellsDirectories()
+const getAllSpells = (query: string = '') => getAllSpellsDirectories()
         .flatMap(spellDirectory =>
             [...fs.readdirSync(spellsPath + spellDirectory)]
                 .map(spellFile => spellsPath + spellDirectory + '/' + spellFile))
         .filter(spellFile => spellFile.includes('.json'))
-        .map(spellFile => JSON.parse(fs.readFileSync(spellFile, 'utf-8')));
+        .map(spellFile => JSON.parse(fs.readFileSync(spellFile, 'utf-8')))
+        .filter(spell => spell.name.includes(query));
 
 dotenv.config();
 
@@ -26,9 +27,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/search', (req, res) => {
-    const spells = getAllSpells();
     res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify(spells));
+    res.send(JSON.stringify(getAllSpells(req.query?.query.toString())));
 });
 
 app.listen(process.env.PORT, () => {

@@ -12,7 +12,6 @@ export const Search = () => {
       fetch('http://localhost:8080/api/search?query=' + query)
         .then((response) => response.json())
         .then((response) => {
-          console.log(response);
           setSpells(response);
         });
   }, [query]);
