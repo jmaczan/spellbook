@@ -1,16 +1,19 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import cors from 'cors';
 
 dotenv.config();
 
 const app = express();
 
+app.use(cors());
+
 app.get('/', (req, res) => {
-    res.send("What's up doc ?!");
+    res.send("Spellbook API");
 });
 
 app.get('/api/search', (req, res) => {
-    res.send(req.query.query);
+    res.send({ text: req.query.query });
 });
 
 app.listen(process.env.PORT, () => {
