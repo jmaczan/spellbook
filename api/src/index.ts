@@ -4,7 +4,7 @@ import cors from 'cors';
 import fs from 'fs';
 import path from 'path';
 
-const spellsPath = path.join(path.resolve(__dirname, '../..'), '/spellbook-registry/spells/');
+const spellsPath = path.join(path.resolve(__dirname, '../..'), '/registry/spells/');
 
 const getAllSpellsDirectories = () => fs.readdirSync(spellsPath);
 
