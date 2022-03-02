@@ -1,6 +1,25 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import fs from 'fs';
+import path from 'path';
+
+const spellsPath = path.join(path.resolve(__dirname, '../..'), '/spellbook-registry/spells/');
+
+const getAllSpellsDirectories = () => fs.readdirSync(spellsPath);
+
+const getAllSpells = () => {
+    let spells: any[] = getAllSpellsDirectories()
+        .flatMap(spellDirectory =>
+            [...fs.readdirSync(spellsPath + spellDirectory)]
+                .map(spellFile => spellsPath + spellDirectory + '/' + spellFile))
+        .filter(spellFile => spellFile.includes('.json'))
+        .map(spellFile => JSON.parse(fs.readFileSync(spellFile, 'utf-8')));
+
+    console.log('spells', spells);
+}
+
+getAllSpells();
 
 dotenv.config();
 
