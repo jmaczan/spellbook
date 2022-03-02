@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent, useEffect, useState } from 'react';
 import { SpellItem } from '../spell-item/SpellItem';
 import { Spell } from '../spell-item/types';
 
@@ -21,6 +21,11 @@ const initialSpells: Spell[] = [
 
 export const Search = () => {
   const [spells, setSpells] = useState<Spell[]>([]);
+  const [query, setQuery] = useState<string>('');
+
+  useEffect(() => {
+    fetch('/api/spells?query=' + query).then((response) => console.log(response));
+  }, [query]);
 
   const searchForSpells = (text: ChangeEvent<HTMLInputElement>) => {
     setSpells(initialSpells.filter((spell) => spell?.name?.includes(text?.target?.value)));
