@@ -8,7 +8,7 @@
     "prestart": "npm run build",
     "start": "node .",
     "tsstart": "ts-node .",
-    "watch": "nodemon --watch '*.ts' --watch '*.json' --exec 'ts-node' ./src/index.ts",
+    "watch": "nodemon --watch '*.ts' --watch '*.json' --exec 'ts-node' --delay 1000ms ./src/index.ts --signal SIGTERM",
     "eslint:fix": "eslint --fix"
   },
   "keywords": [],
@@ -20,10 +20,11 @@
     "@typescript-eslint/eslint-plugin": "^5.13.0",
     "@typescript-eslint/parser": "^5.13.0",
     "eslint": "^8.10.0",
-    "eslint-config-prettier": "^8.4.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "express": "^4.17.3",
     "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
     "ts-node": "^10.6.0",
     "typescript": "^4.6.2"
   },
@@ -31,6 +32,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "fs": "*",
+    "kill-port": "^1.6.1",
     "path": "^0.12.7"
   }
 }
