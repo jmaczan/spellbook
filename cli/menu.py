@@ -1,3 +1,4 @@
+from cli.spellbook_directory import ensure_spellbook_directory_existence
 from parsers import parse_cli_command_arguments, parse_text_command_arguments
 from sys import argv
 from dotenv import dotenv_values
@@ -6,6 +7,7 @@ config = dotenv_values(".env")
 
 
 def menu():
+    ensure_spellbook_directory_existence()
     (command, arguments) = parse_cli_command_arguments(argv)
     run_command(command, arguments)
 
