@@ -1,3 +1,4 @@
+from keyboard_interrupt import handle_keyboard_interrupt
 from menu import *
 
 
@@ -5,4 +6,4 @@ def spellbook():
     menu()
 
 
-spellbook()
+handle_keyboard_interrupt(spellbook)
