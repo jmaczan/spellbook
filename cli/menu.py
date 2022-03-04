@@ -1,4 +1,5 @@
 from add_spell import add_spell
+from list_spells import list_spell
 from run_spell import run_spell
 from spellbook_directory import ensure_spellbook_directory_existence
 from parsers import parse_cli_command_arguments
@@ -24,7 +25,7 @@ def to_be_implemented(command):
 def run_command(command, arguments=None):
     command = command.strip()
     if command == "list" or command == "l":
-        to_be_implemented(command)
+        list_spell()
     elif command == "add" or command == "a":
         add_spell(arguments[0])
     elif command == "remove" or command == "r":
