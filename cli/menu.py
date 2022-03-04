@@ -1,11 +1,10 @@
-from os import system, path
-from constants import spellbook_path
+from add_spell import add_spell
 from spellbook_directory import ensure_spellbook_directory_existence
 from parsers import parse_cli_command_arguments
 from sys import argv
 from dotenv import dotenv_values
-import requests
-import json
+
+
 config = dotenv_values(".env")
 
 API = config["API_PROTOCOL"] + config["API_URL"] + ':' + config["API_PORT"]
@@ -26,16 +25,7 @@ def run_command(command, arguments=None):
     if command == "list" or command == "l":
         to_be_implemented(command)
     elif command == "add" or command == "a":
-        to_be_implemented(command)
-        response = json.loads(requests.get(
-            API + '/api/spell?name=' + arguments[0]).text)
-        print(response['spell.json'])
-        if(not path.isdir(spellbook_path+'/'+arguments[0])):
-            system('mkdir '+spellbook_path+'/'+arguments[0])
-        write_text_to_file(response['spell.json'],
-                           spellbook_path+arguments[0]+'/', 'spell.json')
-        write_text_to_file(response['spell.sh'],
-                           spellbook_path+arguments[0]+'/', 'spell.sh')
+        add_spell(arguments[0])
     elif command == "remove" or command == "r":
         to_be_implemented(command)
     elif command == "commands" or command == "c":
@@ -49,12 +39,3 @@ def run_command(command, arguments=None):
     else:
         print('Run script %s', command)
         to_be_implemented(command)
-
-
-def write_json_to_file(payload, prefix, filename):
-    with open(prefix+filename, 'w') as file:
-        file.write(json.dumps(payload))
-
-def write_text_to_file(payload, prefix, filename):
-    with open(prefix+filename, 'w') as file:
-        file.write(payload)
