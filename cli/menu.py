@@ -32,9 +32,9 @@ def run_command(command, arguments=None):
         print(response['spell.json'])
         if(not path.isdir(spellbook_path+'/'+arguments[0])):
             system('mkdir '+spellbook_path+'/'+arguments[0])
-        write_json_to_file(response['spell.json'],
+        write_text_to_file(response['spell.json'],
                            spellbook_path+arguments[0]+'/', 'spell.json')
-        write_json_to_file(response['spell.sh'],
+        write_text_to_file(response['spell.sh'],
                            spellbook_path+arguments[0]+'/', 'spell.sh')
     elif command == "remove" or command == "r":
         to_be_implemented(command)
@@ -54,3 +54,7 @@ def run_command(command, arguments=None):
 def write_json_to_file(payload, prefix, filename):
     with open(prefix+filename, 'w') as file:
         file.write(json.dumps(payload))
+
+def write_text_to_file(payload, prefix, filename):
+    with open(prefix+filename, 'w') as file:
+        file.write(payload)
