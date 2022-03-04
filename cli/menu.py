@@ -23,9 +23,9 @@ def to_be_implemented(command):
     print('to be implemented: %s' % command)
 
 
-def run_command(command, arguments=None):
+def run_command(command, arguments=[]):
     command = command.strip()
-    spell_name = arguments[0]
+    spell_name = (arguments[0] if len(arguments) > 0 else None)
     if command == "list" or command == "l":
         list_spell()
     elif command == "add" or command == "a":

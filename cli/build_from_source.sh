@@ -1,3 +1,5 @@
+#!/bin/bash
+
 rm -rf build
 rm -rf dist
 pip3 install python-dotenv
