@@ -32,8 +32,6 @@ def run_command(command, arguments=None):
         add_spell(spell_name)
     elif command == "forget" or command == "f" or command == "remove" or command == "r" or command == "delete" or command == "d":
         forget_spell(spell_name)
-    elif command == "commands" or command == "c":
-        to_be_implemented(command)
     elif command == "help" or command == "h":
         to_be_implemented(command)
     elif command == "about" or command == "a":
