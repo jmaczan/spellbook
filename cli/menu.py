@@ -1,4 +1,5 @@
 from add_spell import add_spell
+from run_spell import run_spell
 from spellbook_directory import ensure_spellbook_directory_existence
 from parsers import parse_cli_command_arguments
 from sys import argv
@@ -37,5 +38,5 @@ def run_command(command, arguments=None):
     elif command == "":
         to_be_implemented(command)
     else:
-        print('Run script %s', command)
+        run_spell(command, arguments)
         to_be_implemented(command)

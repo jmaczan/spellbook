@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ $1 == '-h' ] || [ $1 == '--help' ] || [ $1 == '-help' ]
+if [ "$1" == '-h' ] || [ "$1" == '--help' ] || [ "$1" == '-help' ]
 then
     echo 'repeat.sh: Repeat any shell command with interval'
     echo 'Usage: repeat.sh <interval in seconds> <script to run> [options...]'
