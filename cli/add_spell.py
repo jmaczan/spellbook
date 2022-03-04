@@ -11,10 +11,13 @@ API = config["API_PROTOCOL"] + config["API_URL"] + ':' + config["API_PORT"]
 
 
 def add_spell(spell_name):
-    response = json.loads(requests.get(
-        API + '/api/spell?name=' + spell_name).text)
+    if (does_spell_exist(spell_name)):
+        print("Spell already exists.")
+        return None
 
-    ensure_spell_directory(spell_name)
+    response = fetch_spell(spell_name)
+
+    create_spell_directory(spell_name)
 
     write_text_to_file(response['spell.json'],
                        spellbook_path+spell_name+'/', 'spell.json')
@@ -23,6 +26,14 @@ def add_spell(spell_name):
     system('chmod +x '+spellbook_path+'/'+spell_name+'/'+'spell.sh')
 
 
-def ensure_spell_directory(spell_name):
-    if(not path.isdir(spellbook_path+'/'+spell_name)):
-        system('mkdir '+spellbook_path+'/'+spell_name)
+def fetch_spell(spell_name):
+    return json.loads(requests.get(
+        API + '/api/spell?name=' + spell_name).text)
+
+
+def does_spell_exist(spell_name):
+    return path.isdir(spellbook_path+'/'+spell_name)
+
+
+def create_spell_directory(spell_name):
+    system('mkdir '+spellbook_path+'/'+spell_name)
