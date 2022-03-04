@@ -1,4 +1,5 @@
 from add_spell import add_spell
+from forget_spell import forget_spell
 from list_spells import list_spell
 from run_spell import run_spell
 from spellbook_directory import ensure_spellbook_directory_existence
@@ -24,12 +25,13 @@ def to_be_implemented(command):
 
 def run_command(command, arguments=None):
     command = command.strip()
+    spell_name = arguments[0]
     if command == "list" or command == "l":
         list_spell()
     elif command == "add" or command == "a":
-        add_spell(arguments[0])
-    elif command == "remove" or command == "r":
-        to_be_implemented(command)
+        add_spell(spell_name)
+    elif command == "forget" or command == "f" or command == "remove" or command == "r" or command == "delete" or command == "d":
+        forget_spell(spell_name)
     elif command == "commands" or command == "c":
         to_be_implemented(command)
     elif command == "help" or command == "h":
