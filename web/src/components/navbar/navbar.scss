@@ -33,17 +33,24 @@
     color: $primary-background !important;
 }
 
-.navbar__title {
+.navbar__title--primary-half {
     @extend .text-transition;
+
     color: $primary-accent;
+
+    &:hover {
+        color: inherit;
+    }
 }
 
-.navbar__title--half {
+.navbar__title--secondary-half {
+    @extend .text-transition;
+
     color: $secondary-accent;
-}
 
-.navbar__title:hover {
-    color: $primary-text;
+    &:hover {
+        color: inherit;
+    }
 }
 
 .navbar__subtitle {
