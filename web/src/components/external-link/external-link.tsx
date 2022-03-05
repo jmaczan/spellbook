@@ -4,6 +4,7 @@ interface ExternalLinkProps {
   url: string;
   target?: HTMLAttributeAnchorTarget;
   rel?: string;
+  className?: string;
 }
 
 export const ExternalLink: FC<ExternalLinkProps> = ({
@@ -11,8 +12,9 @@ export const ExternalLink: FC<ExternalLinkProps> = ({
   target = '_blank',
   rel = 'noreferrer noopener',
   children,
+  className,
 }) => (
-  <a href={url} target={target} rel={rel}>
+  <a href={url} target={target} rel={rel} className={className}>
     {children}
   </a>
 );

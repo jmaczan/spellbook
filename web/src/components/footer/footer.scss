@@ -21,7 +21,8 @@
 }
 
 .footer__section__link {
-    @extend .footer__section__item, .text-transition;
+    @extend .footer__section__item,
+    .text-transition;
     border-radius: 3px;
 }
 
@@ -42,4 +43,12 @@
 .footer__author {
     padding: 0.25rem 0.5rem;
     font-size: 0.75rem;
+
+    &__link {
+        @extend .text-transition;
+
+        &:hover {
+            color: $primary-text !important;
+        }
+    }
 }

@@ -31,9 +31,18 @@ export const Footer = () => (
       </ul>
     </div>
     <div className='footer__author'>
-      Made in <ExternalLink url={'https://en.wikipedia.org/wiki/Poland'}>Poland 🇵🇱</ExternalLink>,{' '}
-      <ExternalLink url={'https://en.wikipedia.org/wiki/European_Union'}>EU 🇪🇺</ExternalLink> in 2022 by{' '}
-      <ExternalLink url={'https://maczan.pl/'}>Jedrzej Pawel Maczan</ExternalLink>
+      Made in{' '}
+      <ExternalLink className={'footer__author__link'} url={'https://en.wikipedia.org/wiki/Poland'}>
+        Poland 🇵🇱
+      </ExternalLink>
+      ,{' '}
+      <ExternalLink className={'footer__author__link'} url={'https://en.wikipedia.org/wiki/European_Union'}>
+        EU 🇪🇺
+      </ExternalLink>{' '}
+      in 2022 by{' '}
+      <ExternalLink className={'footer__author__link'} url={'https://maczan.pl/'}>
+        Jedrzej Pawel Maczan
+      </ExternalLink>
     </div>
   </footer>
 );
