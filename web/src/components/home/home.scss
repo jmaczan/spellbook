@@ -9,7 +9,7 @@
 .home__howto {
     @extend .home--center;
     margin: 12rem 0rem 10rem 0rem;
-    font-size: 1.8rem;
+    font-size: 1.618rem;
     gap: 1rem;
     flex-wrap: wrap;
 }
@@ -25,7 +25,7 @@
 
 .home__target {
     @extend .home--center;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
 }
 
 .howto__link {
@@ -38,5 +38,4 @@
 
 .home__description {
     margin: 4rem 0;
-    font-size: 1rem;
 }
