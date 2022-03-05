@@ -21,7 +21,7 @@ export const Home = () => (
       <div className='howto__step__icon'>➡️</div>
       <div className='howto__step'>
         Speak the spell&nbsp;&nbsp;
-        <code>$ spellbook your-favourite-script</code>
+        <code className='howto__code'>$ spellbook your-favourite-script</code>
       </div>
     </div>
     <div className='home__target'>For Windows 🪟, Linux 🐧 and macOS 🍎</div>
