@@ -24,3 +24,11 @@
 .home__target {
     @extend .howto__center;
 }
+
+.howto__link {
+    transition: color .1s, background-color .1s;
+}
+
+.howto__link:hover {
+    color: #eee;
+}
