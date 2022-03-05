@@ -1,21 +1,27 @@
 import React from 'react';
 import { SpellItem } from '../spell-item/spell-item';
 import './search.scss';
-import { SearchBar } from '../search-bar/search-bar';
 import { Spell } from '../spell-item/types';
 
 interface SearchProps {
   spells: Spell[];
+  query: string;
 }
 
-export const Search = ({ spells = [] }: SearchProps) => {
+export const Search = ({ spells = [], query }: SearchProps) => {
   return (
     <section>
       <div className='search__spells'>
         {spells.map((spell) => (
           <SpellItem key={spell.name} spell={spell} />
         ))}
-        {spells.length === 0 ? <div className='search__not-found'>No spells found for your query 📚</div> : null}
+        {spells.length === 0 ? (
+          <div className='search__not-found'>
+            {!!query && query !== ''
+              ? 'No spells found for your query 📚'
+              : 'Type your query in search bar above to get results'}
+          </div>
+        ) : null}
       </div>
     </section>
   );

@@ -1,16 +1,16 @@
-import React, { ChangeEvent, useEffect, useState } from 'react';
+import React, { ChangeEvent, useEffect } from 'react';
 import { Spell } from '../spell-item/types';
 import debounce from 'lodash.debounce';
 import './search-bar.scss';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 export interface SearchBarProps {
+  query: string;
   onChange: (value: Spell[]) => void;
+  setQuery: (value: string) => void;
 }
 
-export const SearchBar = ({ onChange }: SearchBarProps) => {
-  const [query, setQuery] = useState<string>('');
-
+export const SearchBar = ({ query, onChange, setQuery }: SearchBarProps) => {
   const navigate = useNavigate();
   const location = useLocation();
 

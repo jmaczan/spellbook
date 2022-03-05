@@ -5,10 +5,12 @@ import { Spell } from '../spell-item/types';
 import './navbar.scss';
 
 interface NavbarProps {
-  onChange: (spells: Spell[]) => void;
+  query: string;
+  onChange: (value: Spell[]) => void;
+  setQuery: (value: string) => void;
 }
 
-export const Navbar = ({ onChange }: NavbarProps) => (
+export const Navbar = ({ query, onChange, setQuery }: NavbarProps) => (
   <nav className='navbar'>
     <div>
       <Link to='/'>
@@ -16,7 +18,7 @@ export const Navbar = ({ onChange }: NavbarProps) => (
       </Link>
       <div className='navbar__subtitle'>Bash and Powershell scripts registry</div>
     </div>
-    <SearchBar onChange={onChange} />
+    <SearchBar onChange={onChange} query={query} setQuery={setQuery} />
     <div>
       <ul className='navbar__items'>
         <Link to='/install'>

@@ -10,16 +10,17 @@ import { Spell } from './components/spell-item/types';
 
 function App() {
   const [spells, setSpells] = useState<Spell[]>([]);
+  const [query, setQuery] = useState<string>('');
 
   return (
     <div className='App'>
       <BrowserRouter>
-        <Navbar onChange={setSpells} />
+        <Navbar onChange={setSpells} query={query} setQuery={setQuery} />
         <div className='app__content'>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/install' element={<Install />} />
-            <Route path='/search' element={<Search spells={spells} />} />
+            <Route path='/search' element={<Search spells={spells} query={query} />} />
           </Routes>
         </div>
         <Footer />
