@@ -22,7 +22,7 @@ export const SearchBar = ({ onChange }: SearchBarProps) => {
         .then((response) => {
           onChange(response);
         });
-  }, [query, onChange, navigate, location]);
+  }, [query, onChange]);
 
   const searchForSpells = (text: ChangeEvent<HTMLInputElement>) => {
     setQuery(text?.target.value);
