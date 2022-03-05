@@ -33,6 +33,6 @@ export const Home = () => (
         🍎
       </span>
     </div>
-    <div className='home__description home--center'>✨🔮</div>
+    <div className='home__description home--center'></div>
   </section>
 );

@@ -7,6 +7,8 @@ import { Install } from './components/install/Install';
 import { Search } from './components/search/search';
 import { Footer } from './components/footer/Footer';
 import { Spell } from './components/spell-item/types';
+import { About } from './components/about/about';
+import { License } from './components/license/license';
 
 function App() {
   const [spells, setSpells] = useState<Spell[]>([]);
@@ -21,6 +23,8 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/install' element={<Install />} />
             <Route path='/search' element={<Search spells={spells} query={query} />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/license' element={<License />} />
           </Routes>
         </div>
         <Footer />
