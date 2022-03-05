@@ -25,6 +25,6 @@ export const Home = () => (
       </div>
     </div>
     <div className='home__target'>For Windows 🪟, Linux 🐧 and macOS 🍎</div>
-    <div>Spellbook - The magic is happening here ✨🔮</div>
+    <div className='home__description home--center'>✨🔮</div>
   </section>
 );

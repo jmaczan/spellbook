@@ -1,28 +1,28 @@
-.howto__center {
+.home--center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .home__howto {
-    @extend .howto__center;
-    margin: 6rem 0rem 4rem 0rem;
+    @extend .home--center;
+    margin: 12rem 0rem 10rem 0rem;
     font-size: 1.618rem;
     gap: 1rem;
     flex-wrap: wrap;
 }
 
 .howto__step {
-    @extend .howto__center;
+    @extend .home--center;
 }
 
 .howto__step__icon {
-    @extend .howto__center;
+    @extend .home--center;
     font-size: 2rem
 }
 
 .home__target {
-    @extend .howto__center;
+    @extend .home--center;
     font-size: 1.1rem;
 }
 
@@ -32,4 +32,8 @@
 
 .howto__link:hover {
     color: #eee;
+}
+
+.home__description {
+    margin: 4rem 0;
 }
