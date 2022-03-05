@@ -9,12 +9,9 @@
     background-color: $primary-background;
 }
 
-.spell-item__secondary-accent-text {
-    color: $secondary-accent;
-}
 
 .spell-item__title {
-    @extend .spell-item__secondary-accent-text;
+    @extend .secondary-accent-text;
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
@@ -28,7 +25,7 @@
 }
 
 .spell-item__author {
-    @extend .spell-item__secondary-accent-text;
+    @extend .secondary-accent-text;
 }
 
 .spell-item__bottom {
@@ -36,9 +33,9 @@
 }
 
 .spell-item__separator {
-    @extend .spell-item__secondary-accent-text;
+    @extend .secondary-accent-text;
 }
 
 .spell-item__shell-prompt {
-    @extend .spell-item__secondary-accent-text;
+    @extend .secondary-accent-text;
 }

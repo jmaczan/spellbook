@@ -19,8 +19,9 @@
 }
 
 .howto__step__icon {
-    @extend .home--center;
-    font-size: 2rem
+    @extend .home--center,
+    .secondary-accent-text;
+    font-size: 2rem;
 }
 
 .home__target {
@@ -43,4 +44,8 @@
 
 .home__description {
     margin: 4rem 0;
+}
+
+.howto__code__shell-prompt {
+    @extend .secondary-accent-text;
 }

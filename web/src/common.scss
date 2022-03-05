@@ -21,3 +21,7 @@ $secondary-accent: $accent-2;
 $primary-text: #eee;
 $primary-background: #030303;
 $secondary-background: #1d1d1d;
+
+.secondary-accent-text {
+    color: $secondary-accent;
+}
