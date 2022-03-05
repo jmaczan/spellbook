@@ -4,6 +4,8 @@ export interface Spell {
   name: string;
   description: string;
   author: string;
+  example?: string;
   target: string[];
   tags?: string[];
+  license?: string;
 }

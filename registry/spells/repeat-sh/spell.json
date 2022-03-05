@@ -8,5 +8,7 @@
         "linux",
         "bsd"
     ],
-    "author": "Jedrzej Pawel Maczan <jedrzejpawel@maczan.pl>"
+    "example": "repeat-sh 5 ls -no-clean",
+    "author": "Jedrzej Pawel Maczan <jedrzejpawel@maczan.pl>",
+    "license": "GPLv2"
 }

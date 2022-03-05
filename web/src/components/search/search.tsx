@@ -1,7 +1,8 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
-import { SpellItem } from '../spell-item/SpellItem';
+import { SpellItem } from '../spell-item/spell-item';
 import { Spell } from '../spell-item/types';
 import debounce from 'lodash.debounce';
+import './search.scss';
 
 export const Search = () => {
   const [spells, setSpells] = useState<Spell[]>([]);
@@ -24,9 +25,11 @@ export const Search = () => {
     <section>
       <h1>Search for packages</h1>
       <input onChange={debounce(searchForSpells, 300)} />
-      {spells.map((spell) => (
-        <SpellItem key={spell.name} spell={spell} />
-      ))}
+      <div className='search__spells'>
+        {spells.map((spell) => (
+          <SpellItem key={spell.name} spell={spell} />
+        ))}
+      </div>
     </section>
   );
 };

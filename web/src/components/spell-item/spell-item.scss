@@ -1,0 +1,31 @@
+@import '../../common.scss';
+
+.spell-item {
+    // max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2rem 0;
+    // border: 1px solid $secondary-background;
+    // border-radius: 3px;
+    background-color: $primary-background;
+}
+
+.spell-item__title {
+    color: $secondary-accent;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.spell-item__description {
+    margin-bottom: 0.5rem;
+}
+
+.spell-item__example {
+    margin-bottom: 0.5rem;
+}
+
+.item__example {
+
+}
