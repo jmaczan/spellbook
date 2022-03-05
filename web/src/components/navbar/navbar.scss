@@ -23,17 +23,17 @@
 }
 
 .navbar__item:hover {
-    background-color: #eee;
-    color: #030303 !important;
+    background-color: $primary-text;
+    color: $primary-background !important;
 }
 
 .navbar__title {
     @extend .text-transition;
-    color: #d38a8a;
+    color: $primary-accent;
 }
 
 .navbar__title:hover {
-    color: #eee;
+    color: $primary-text;
 }
 
 .navbar__subtitle {

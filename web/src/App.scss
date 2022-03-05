@@ -1,4 +1,6 @@
 @import 'reset.css';
+@import 'common.scss';
+
 img {
   box-shadow: 1px 1px 10px rgba(211, 138, 138, 1);
 }
@@ -30,8 +32,8 @@ table {
 
 html {
   padding: 1rem;
-  background: #030303;
-  color: #eee;
+  background: $primary-background;
+  color: $primary-text;
   font-size: 1rem;
   letter-spacing: 0;
   line-height: 1.5;
@@ -41,21 +43,12 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  /* text-decoration: underline; */
-}
-
 h1 {
   font-size: 1.618rem;
   font-weight: 600;
   text-align: center;
-  color: #eee;
+  color: $primary-text;
   text-decoration: none;
-}
-
-h2 {
-  font-weight: 600;
-  display: inline-block;
 }
 
 body {
@@ -66,7 +59,7 @@ body {
 }
 
 a {
-  color: #d38a8a;
+  color: $primary-accent;
   font-weight: 600;
 }
 
@@ -79,8 +72,8 @@ p {
 }
 
 code {
-  color: #d38a8a;
-  background-color: #1d1d1d; /* #444242; */
+  color: $primary-accent;
+  background-color: $secondary-background;
   text-align: left;
   font-size: 1rem;
   border-radius: 2px;
@@ -88,63 +81,8 @@ code {
   padding: 5px 10px;
   white-space: pre-wrap;
   font-weight: 400;
-  /*text-shadow: 1px 1px 10px rgba(211, 138, 138, 0.3);*/
 }
 
-.menu {
-  margin: 10px 0 40px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.25rem;
-  flex-wrap: wrap;
-  column-gap: 20px;
-}
-
-.menu--languages {
-  font-size: 1rem;
-}
-
-.menu__item {
-  margin-top: 10px;
-  font-weight: 600;
-}
-
-.section {
-  margin-bottom: 20px;
-}
-
-.blog__item {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 40px;
-}
-
-.blog__item__tags {
-  font-style: italic;
-}
-
-.post__header {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 40px;
-}
-
-.post__signature {
-  margin-top: 20px;
-}
-
-.post__tags {
-  font-style: italic;
-}
-
-.footer {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
 
 .bold {
   font-weight: 600;
@@ -163,7 +101,7 @@ code {
 }
 
 .highlight {
-  color: #d38a8a;
+  color: $primary-accent;
 }
 
 .italic {
