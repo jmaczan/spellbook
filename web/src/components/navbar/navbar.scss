@@ -38,6 +38,10 @@
     color: $primary-accent;
 }
 
+.navbar__title--half {
+    color: $secondary-accent;
+}
+
 .navbar__title:hover {
     color: $primary-text;
 }
