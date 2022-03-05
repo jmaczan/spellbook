@@ -1,19 +1,20 @@
 @import '../../common.scss';
 
 .spell-item {
-    // max-width: 600px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
     padding: 2rem 0;
-    // border: 1px solid $secondary-background;
-    // border-radius: 3px;
     background-color: $primary-background;
 }
 
-.spell-item__title {
+.spell-item__secondary-accent-text {
     color: $secondary-accent;
+}
+
+.spell-item__title {
+    @extend .spell-item__secondary-accent-text;
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
@@ -26,6 +27,18 @@
     margin-bottom: 0.5rem;
 }
 
+.spell-item__author {
+    @extend .spell-item__secondary-accent-text;
+}
+
 .spell-item__bottom {
     font-size: 0.75rem;
+}
+
+.spell-item__separator {
+    @extend .spell-item__secondary-accent-text;
+}
+
+.spell-item__shell-prompt {
+    @extend .spell-item__secondary-accent-text;
 }
