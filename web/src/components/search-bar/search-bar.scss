@@ -1,5 +1,14 @@
 @import '../../common.scss';
 
-.search__spells {
-    margin-top: 2rem;
+.search-bar {
+    background-color: $secondary-background;
+    border-radius: 3px;
+    border: none;
+    color: $primary-text;
+    // border: 1px solid $secondary-accent;
+    padding: 0.5rem 1rem;
+
+    &:focus-visible {
+        outline: 1px solid $secondary-accent;
+    }
 }

@@ -12,8 +12,9 @@ interface SearchProps {
 export const Search = ({ spells, onChange }: SearchProps) => {
   return (
     <section>
-      <h1>Search for packages</h1>
-      <SearchBar onChange={onChange} />
+      <div className='search__search-bar'>
+        <SearchBar onChange={onChange} />
+      </div>
       <div className='search__spells'>
         {spells.map((spell) => (
           <SpellItem key={spell.name} spell={spell} />

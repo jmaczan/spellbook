@@ -23,5 +23,5 @@ export const SearchBar = ({ onChange }: SearchBarProps) => {
     setQuery(text?.target.value);
   };
 
-  return <input onChange={debounce(searchForSpells, 300)} />;
+  return <input className='search-bar' placeholder='Search for spells' onChange={debounce(searchForSpells, 300)} />;
 };
