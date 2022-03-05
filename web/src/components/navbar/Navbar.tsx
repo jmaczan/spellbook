@@ -5,9 +5,9 @@ import './navbar.scss';
 export const Navbar = () => (
   <nav className='navbar'>
     <div>
-      <h1 className='navbar__title'>
-        <Link to='/'>🪄 Spellbook 📖</Link>
-      </h1>
+      <Link to='/'>
+        <h1 className='navbar__title'>🪄 Spellbook 📖</h1>
+      </Link>
       <div className='navbar__subtitle'>Bash and Powershell scripts registry</div>
     </div>
     <ul className='navbar__items'>

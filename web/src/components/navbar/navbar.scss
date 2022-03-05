@@ -25,7 +25,14 @@
     color: #030303 !important;
 }
 
-.navbar__title {}
+.navbar__title {
+    transition: color .1s, background-color .1s;
+    color: #d38a8a;
+}
+
+.navbar__title:hover {
+    color: #eee;
+}
 
 .navbar__subtitle {
     font-size: 0.75rem;
