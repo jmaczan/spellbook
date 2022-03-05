@@ -4,18 +4,19 @@ import './navbar.scss';
 
 export const Navbar = () => (
   <nav className='navbar'>
-    <h1 className='navbar__title'>Spellbook</h1>
-    <div className='navbar__subtitle'>Bash and Powershell scripts registry</div>
-    <ul className='navbar__items'>
-      <li className='navbar__item'>
+    <div>
+      <h1 className='navbar__title'>
         <Link to='/'>Spellbook</Link>
-      </li>
-      <li className='navbar__item'>
-        <Link to='/install'>Install</Link>
-      </li>
-      <li className='navbar__item'>
-        <Link to='/search'>Search</Link>
-      </li>
+      </h1>
+      <div className='navbar__subtitle'>Bash and Powershell scripts registry</div>
+    </div>
+    <ul className='navbar__items'>
+      <Link to='/install'>
+        <li className='navbar__item'>Install</li>
+      </Link>
+      <Link to='/search'>
+        <li className='navbar__item'>Search</li>
+      </Link>
     </ul>
   </nav>
 );

@@ -20,9 +20,12 @@
 }
 
 .navbar__item:hover {
-    background-color: #333333;
+    background-color: #eee;
+    color: #030303 !important;
 }
 
 .navbar__title {}
 
-.navbar__subtitle {}
+.navbar__subtitle {
+    font-size: 0.75rem;
+}
