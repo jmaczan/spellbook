@@ -14,6 +14,9 @@ export const Footer = () => (
         <Link to='/search'>
           <li className='footer__section__link'>Search for spell</li>
         </Link>
+        <Link to='/documentation'>
+          <li className='footer__section__link'>Documentation</li>
+        </Link>
         <Link to='/add'>
           <li className='footer__section__link'>Add spell</li>
         </Link>

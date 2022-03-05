@@ -31,6 +31,9 @@ export const Navbar = ({ query, onChange, setQuery }: NavbarProps) => (
         <Link to='/search'>
           <li className='navbar__item'>Search</li>
         </Link>
+        <Link to='/documentation'>
+          <li className='navbar__item'>Documentation</li>
+        </Link>
         <Link to='/add'>
           <li className='navbar__item'>📤&nbsp;&nbsp;Add</li>
         </Link>
