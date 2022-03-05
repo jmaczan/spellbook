@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.scss';
 import { Navbar } from './components/navbar/Navbar';
@@ -6,8 +6,11 @@ import { Home } from './components/home/home';
 import { Install } from './components/install/Install';
 import { Search } from './components/search/search';
 import { Footer } from './components/footer/Footer';
+import { Spell } from './components/spell-item/types';
 
 function App() {
+  const [spells, setSpells] = useState<Spell[]>([]);
+
   return (
     <div className='App'>
       <BrowserRouter>
@@ -16,7 +19,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/install' element={<Install />} />
-            <Route path='/search' element={<Search />} />
+            <Route path='/search' element={<Search spells={spells} onChange={setSpells} />} />
           </Routes>
         </div>
         <Footer />

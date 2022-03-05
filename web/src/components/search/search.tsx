@@ -1,30 +1,19 @@
-import React, { ChangeEvent, useEffect, useState } from 'react';
+import React from 'react';
 import { SpellItem } from '../spell-item/spell-item';
-import { Spell } from '../spell-item/types';
-import debounce from 'lodash.debounce';
 import './search.scss';
+import { SearchBar } from '../search-bar/search-bar';
+import { Spell } from '../spell-item/types';
 
-export const Search = () => {
-  const [spells, setSpells] = useState<Spell[]>([]);
-  const [query, setQuery] = useState<string>('');
+interface SearchProps {
+  spells: Spell[];
+  onChange: (spells: Spell[]) => void;
+}
 
-  useEffect(() => {
-    !!query &&
-      fetch('http://localhost:8080/api/search?query=' + query)
-        .then((response) => response.json())
-        .then((response) => {
-          setSpells(response);
-        });
-  }, [query]);
-
-  const searchForSpells = (text: ChangeEvent<HTMLInputElement>) => {
-    setQuery(text?.target.value);
-  };
-
+export const Search = ({ spells, onChange }: SearchProps) => {
   return (
     <section>
       <h1>Search for packages</h1>
-      <input onChange={debounce(searchForSpells, 300)} />
+      <SearchBar onChange={onChange} />
       <div className='search__spells'>
         {spells.map((spell) => (
           <SpellItem key={spell.name} spell={spell} />
