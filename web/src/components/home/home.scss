@@ -1,3 +1,5 @@
+@import '../../common.scss';
+
 .home--center {
     display: flex;
     justify-content: center;
@@ -27,7 +29,7 @@
 }
 
 .howto__link {
-    transition: color .1s, background-color .1s;
+    @extend .text-transition;
 }
 
 .howto__link:hover {

@@ -1,3 +1,5 @@
+@import '../../common.scss';
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -13,7 +15,7 @@
 }
 
 .navbar__item {
-    transition: color .1s, background-color .1s;
+    @extend .text-transition;
     justify-content: space-between;
     padding: 0.25rem 1rem;
     border-radius: 3px;
@@ -26,7 +28,7 @@
 }
 
 .navbar__title {
-    transition: color .1s, background-color .1s;
+    @extend .text-transition;
     color: #d38a8a;
 }
 
