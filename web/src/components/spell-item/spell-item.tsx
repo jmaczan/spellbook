@@ -13,7 +13,10 @@ export const SpellItem = ({ spell }: SpellItemProps) => (
     </div>{' '}
     <div className='spell-item__description'>{spell.description}</div>
     {spell.example ? <code className='spell-item__example'>$ spellbook {spell.example}</code> : null}
-    {spell.license ? <div className='spell-item__license'>{spell.license}</div> : null}
+    <div className='spell-item__bottom'>
+      {spell.license ? <span className='spell-item__license'>{spell.license} ∙ </span> : null}
+      Version {spell.version} ∙ by {spell.author}
+    </div>
   </div>
 );
 

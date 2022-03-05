@@ -8,4 +8,5 @@ export interface Spell {
   target: string[];
   tags?: string[];
   license?: string;
+  version: string;
 }
