@@ -5,6 +5,7 @@ import { Navbar } from './components/navbar/Navbar';
 import { Home } from './components/home/home';
 import { Install } from './components/install/Install';
 import { Search } from './components/search/Search';
+import { Footer } from './components/footer/Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path='/search' element={<Search />} />
           </Routes>
         </div>
+        <Footer />
       </BrowserRouter>
     </div>
   );
