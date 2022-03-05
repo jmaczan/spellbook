@@ -16,6 +16,7 @@ export const Home = () => (
         <code>$ spellbook your-favourite-script</code>
       </div>
     </div>
+    <div className='home__target'>For Windows 🪟, Linux 🐧 and macOS 🍎</div>
     <div>Spellbook - The magic is happening here ✨🔮</div>
   </section>
 );

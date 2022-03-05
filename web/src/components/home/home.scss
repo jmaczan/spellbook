@@ -1,13 +1,19 @@
-.home__howto {
+.howto__center {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 4rem 0rem;
+}
+
+.home__howto {
+    @extend .howto__center;
+    margin: 4rem 0rem 2rem 0rem;
     font-size: 1.2rem;
 }
 
 .howto__step {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend .howto__center;
+}
+
+.home__target {
+    @extend .howto__center;
 }
