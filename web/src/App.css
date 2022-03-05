@@ -80,12 +80,12 @@ p {
 
 code {
   color: #d38a8a;
-  background-color: #444242;
+  background-color: #1d1d1d; /* #444242; */
   text-align: left;
   font-size: 1rem;
   border-radius: 2px;
   margin: 0 2px;
-  padding: 3px 5px;
+  padding: 5px 10px;
   white-space: pre-wrap;
   font-weight: 400;
   /*text-shadow: 1px 1px 10px rgba(211, 138, 138, 0.3);*/
