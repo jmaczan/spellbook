@@ -6,13 +6,15 @@ export const Home = () => (
   <section>
     <div className='home__howto'>
       <div className='howto__step'>
-        <Link to='/install'>Install</Link>&nbsp;Spellbook ➡️&nbsp;
+        <Link to='/install'>Install</Link>&nbsp;Spellbook
       </div>
+      <div className='howto__step__icon'>➡️</div>
       <div className='howto__step'>
-        <Link to='/search'>Find</Link>&nbsp;your favourite script&nbsp;
+        <Link to='/search'>Find</Link>&nbsp;your favourite script
       </div>
+      <div className='howto__step__icon'>➡️</div>
       <div className='howto__step'>
-        ➡️&nbsp;Run it&nbsp;
+        Speak the spell&nbsp;
         <code>$ spellbook your-favourite-script</code>
       </div>
     </div>
