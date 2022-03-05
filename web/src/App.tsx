@@ -14,12 +14,12 @@ function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-        <Navbar />
+        <Navbar onChange={setSpells} />
         <div className='app__content'>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/install' element={<Install />} />
-            <Route path='/search' element={<Search spells={spells} onChange={setSpells} />} />
+            <Route path='/search' element={<Search spells={spells} />} />
           </Routes>
         </div>
         <Footer />
