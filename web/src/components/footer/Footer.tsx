@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ExternalLink } from '../external-link/external-link';
 import './footer.scss';
 
 export const Footer = () => (
@@ -28,6 +29,11 @@ export const Footer = () => (
           <li className='footer__section__link'>About</li>
         </Link>
       </ul>
+    </div>
+    <div className='footer__author'>
+      Made in <ExternalLink url={'https://en.wikipedia.org/wiki/Poland'}>Poland 🇵🇱</ExternalLink>,{' '}
+      <ExternalLink url={'https://en.wikipedia.org/wiki/European_Union'}>EU 🇪🇺</ExternalLink> in 2022 by{' '}
+      <ExternalLink url={'https://maczan.pl/'}>Jedrzej Pawel Maczan</ExternalLink>
     </div>
   </footer>
 );
