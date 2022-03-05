@@ -7,7 +7,7 @@
 .home__howto {
     @extend .howto__center;
     margin: 4rem 0rem 2rem 0rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     gap: 1rem;
     flex-wrap: wrap;
 }
@@ -23,6 +23,7 @@
 
 .home__target {
     @extend .howto__center;
+    font-size: 1.1rem;
 }
 
 .howto__link {
