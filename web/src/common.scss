@@ -3,7 +3,20 @@
     transition-delay: 0.05s;
 }
 
-$primary-accent: #d38a8a;
+$accent-1: #d38a8a;
+$accent-2:#AEADF0;
+$accent-3: #FDE74C;
+$accent-4: #5BC0EB;
+$accent-5: #E55934;
+$accent-6: #0CA4A5;
+$accent-7: #0892A5;
+$accent-8: #999AC6;
+$accent-9: #B8BACF;
+$accent-10: #F56960;
+$accent-11: #F3C98B;
+$accent-12: #E6AF2E;
+$primary-accent: $accent-3;
+
 $primary-text: #eee;
 $primary-background: #030303;
 $secondary-background: #1d1d1d;
