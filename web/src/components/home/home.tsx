@@ -26,7 +26,13 @@ export const Home = () => (
         </code>
       </div>
     </div>
-    <div className='home__target'>For Windows 🪟, Linux 🐧 and macOS 🍎</div>
+    <div className='home__target'>
+      <span>
+        For <span className='secondary-accent-text'>Windows</span> 🪟,{' '}
+        <span className='secondary-accent-text'>Linux</span> 🐧 and <span className='secondary-accent-text'>macOS</span>{' '}
+        🍎
+      </span>
+    </div>
     <div className='home__description home--center'>✨🔮</div>
   </section>
 );
