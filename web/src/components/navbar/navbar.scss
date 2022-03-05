@@ -1,0 +1,28 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.navbar__items {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem
+}
+
+.navbar__item {
+    transition: color .1s, background-color .1s;
+    justify-content: space-between;
+    padding: 0.25rem 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.navbar__item:hover {
+    background-color: #333333;
+}
+
+.navbar__title {}
+
+.navbar__subtitle {}
