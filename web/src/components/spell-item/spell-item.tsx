@@ -16,7 +16,7 @@ export const SpellItem = ({ spell }: SpellItemProps) => (
     <div className='spell-item__description'>{spell.description}</div>
     {spell.example ? (
       <code className='spell-item__example'>
-        <span className='spell-item__shell-prompt'>$</span> spellbook {spell.example}
+        <span className='spell-item__shell-prompt'>$</span> spell {spell.example}
       </code>
     ) : null}
     <div className='spell-item__bottom'>

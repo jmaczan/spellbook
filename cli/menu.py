@@ -26,9 +26,9 @@ def to_be_implemented(command):
 def run_command(command, arguments=[]):
     command = command.strip()
     spell_name = (arguments[0] if len(arguments) > 0 else None)
-    if command == "list" or command == "l":
+    if command == "list" or command == "book" or command == "b":
         list_spell()
-    elif command == "add" or command == "a":
+    elif command == "add" or command == "learn":
         add_spell(spell_name)
     elif command == "forget" or command == "f" or command == "remove" or command == "r" or command == "delete" or command == "d":
         forget_spell(spell_name)

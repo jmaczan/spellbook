@@ -22,7 +22,7 @@ export const Home = () => (
       <div className='howto__step'>
         Speak the spell&nbsp;&nbsp;
         <code className='howto__code'>
-          <span className='howto__code__shell-prompt'>$</span> spellbook your-favourite-script
+          <span className='howto__code__shell-prompt'>$</span> spell your-favourite-script
         </code>
       </div>
     </div>
