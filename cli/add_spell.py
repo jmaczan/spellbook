@@ -24,6 +24,7 @@ def add_spell(spell_name):
     write_text_to_file(response['spell.sh'],
                        spellbook_path+spell_name+'/', 'spell.sh')
     system('chmod +x '+spellbook_path+'/'+spell_name+'/'+'spell.sh')
+    print("You learned %s" % spell_name)
 
 
 def fetch_spell(spell_name):
