@@ -10,8 +10,8 @@ export const About = () => (
     <div>✨🔮</div>
     <div></div>
     <div className='about__personal'>
-      Spellbook is a side project whose programming helps me to cope with anxiety related to war in neighbouring country
-      - Ukraine. Freedom to Ukraine 🇺🇦
+      Spellbook is a side project whose programming helps me to cope with anxiety related to war in neighbouring
+      country. Freedom to Ukraine 🇺🇦
     </div>
   </section>
 );

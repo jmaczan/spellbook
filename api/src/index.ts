@@ -9,13 +9,13 @@ const spellsPath = path.join(path.resolve(__dirname, '../..'), '/registry/spells
 
 const getAllSpellsDirectories = () => fs.readdirSync(spellsPath);
 
-const getSpells = (query: string = '') => getAllSpellsDirectories()
+const getSpells = (query: string) => !!query ? getAllSpellsDirectories()
     .flatMap(spellDirectory =>
         [...fs.readdirSync(spellsPath + spellDirectory)]
             .map(spellFile => spellsPath + spellDirectory + '/' + spellFile))
     .filter(spellFile => spellFile.includes('.json'))
     .map(spellFile => JSON.parse(fs.readFileSync(spellFile, 'utf-8')))
-    .filter(spell => spell.name.includes(query)) ?? [];
+    .filter(spell => spell.name.includes(query)) ?? [] : [];
 
 const getSpell = (spellName: string): Spell => {
     if (!getAllSpellsDirectories().find(spellDirectory => spellDirectory === spellName)) {

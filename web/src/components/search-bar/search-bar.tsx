@@ -16,12 +16,11 @@ export const SearchBar = ({ query, onChange, setQuery }: SearchBarProps) => {
 
   useEffect(() => {
     !!query && location.pathname !== '/search' && navigate('/search');
-    !!query &&
-      fetch('http://localhost:8080/api/search?query=' + query)
-        .then((response) => response.json())
-        .then((response) => {
-          onChange(response);
-        });
+    fetch('http://localhost:8080/api/search?query=' + query)
+      .then((response) => response.json())
+      .then((response) => {
+        onChange(response);
+      });
   }, [query, onChange]);
 
   const searchForSpells = (text: ChangeEvent<HTMLInputElement>) => {
