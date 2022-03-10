@@ -12,5 +12,5 @@ def forget_spell(spell_name):
 
 
 def validate(text):
-    if (text is None or text.strip() is '' or text.strip() is '/'):
+    if (text is None or text.strip() == '' or text.strip() == '/'):
         print("Invalid configuration")

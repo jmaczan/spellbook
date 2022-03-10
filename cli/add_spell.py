@@ -7,7 +7,8 @@ from dotenv import dotenv_values
 
 config = dotenv_values(".env")
 
-API = config["API_PROTOCOL"] + config["API_URL"] + ':' + config["API_PORT"]
+API = config["API_PROTOCOL"] + config["API_URL"] + \
+    ('' if "API_PORT" not in config else ':' + config["API_PORT"])
 
 
 def add_spell(spell_name):
