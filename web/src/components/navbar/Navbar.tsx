@@ -20,7 +20,7 @@ export const Navbar = ({ query, onChange, setQuery }: NavbarProps) => (
           <span className='navbar__title--primary-half'>book</span> 📖
         </h1>
       </Link>
-      <div className='navbar__subtitle'>Bash and Powershell scripts registry</div>
+      <div className='navbar__subtitle'>Shell and Powershell scripts registry</div>
     </div>
     <SearchBar onChange={onChange} query={query} setQuery={setQuery} />
     <div>
