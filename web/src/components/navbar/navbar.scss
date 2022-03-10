@@ -14,6 +14,17 @@
     gap: 1rem
 }
 
+.navbar__title-with-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-grow: 1;
+}
+
+
+
 .navbar__items {
     display: flex;
     flex-direction: row;
@@ -55,4 +66,22 @@
 
 .navbar__subtitle {
     font-size: 0.75rem;
+    text-align: center;
+}
+
+.navbar__burger-menu {
+    display: none;
+}
+
+@media (max-width: $mobile) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar__burger-menu {
+        display: block;
+        color: white;
+        justify-content: center;
+        align-items: center;
+    }
 }
