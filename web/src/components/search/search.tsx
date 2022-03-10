@@ -17,7 +17,16 @@ export const Search = ({ spells = [], query }: SearchProps) => {
         ))}
         {spells.length === 0 ? (
           <div className='search__not-found'>
-            {!!query && query !== '' ? 'No spells found for your query 📚' : 'Type your query in search bar above'}
+            {!!query && query !== '' ? (
+              'No spells found for your query 📚'
+            ) : (
+              <>
+                <div>
+                  <h1>Search</h1>
+                </div>
+                <div>Type your query in search bar above</div>
+              </>
+            )}
           </div>
         ) : null}
       </div>

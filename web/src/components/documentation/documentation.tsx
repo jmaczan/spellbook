@@ -4,7 +4,7 @@ import './documentation.scss';
 
 export const Documentation = () => (
   <section className='documentation'>
-    <div>Documentation</div>
+    <h1>Documentation</h1>
     <div className='documentation__item'>
       <Link to='/install'>Install</Link> spellbook cli app
     </div>

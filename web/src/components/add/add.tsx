@@ -4,6 +4,7 @@ import './add.scss';
 
 export const AddScript = () => (
   <section className='add'>
+    <h1>Add a Script</h1>
     <div>
       In order to add a script to the registry, fork the repository, add it to <code>spells</code> directory and send a
       Pull Request.
