@@ -12,6 +12,7 @@ export const Home = () => (
         &nbsp;Spellbook
       </div>
       <div className='howto__step__icon'>➡</div>
+      <div className='howto__step__icon--mobile'>⬇</div>
       <div className='howto__step'>
         <Link className='howto__link' to='/search'>
           Find
@@ -19,6 +20,7 @@ export const Home = () => (
         &nbsp;your favourite script
       </div>
       <div className='howto__step__icon'>➡</div>
+      <div className='howto__step__icon--mobile'>⬇</div>
       <div className='howto__step'>
         Speak the spell&nbsp;&nbsp;
         <code className='howto__code'>

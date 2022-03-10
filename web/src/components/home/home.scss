@@ -30,6 +30,10 @@
     font-size: 2rem;
 }
 
+.howto__step__icon--mobile {
+    display: none;
+}
+
 .home__target {
     @extend .home--center;
     font-size: 1.1rem;
@@ -54,4 +58,23 @@
 
 .howto__code__shell-prompt {
     @extend .secondary-accent-text;
+}
+
+@media (max-width: $mobile) {
+    .home__howto {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .howto__step__icon {
+        display: none;
+    }
+
+    .howto__step__icon--mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $secondary-accent;
+        font-size: 2rem;
+    }
 }
