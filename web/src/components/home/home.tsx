@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './home.scss';
 
 export const Home = () => (
-  <section>
+  <section className='home'>
     <div className='home__howto'>
       <div className='howto__step'>
         <Link className='howto__link' to='/install'>
@@ -33,6 +33,5 @@ export const Home = () => (
         🍎
       </span>
     </div>
-    <div className='home__description home--center'></div>
   </section>
 );

@@ -1,5 +1,12 @@
 @import '../../common.scss';
 
+.home {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 .home--center {
     display: flex;
     justify-content: center;
@@ -8,7 +15,6 @@
 
 .home__howto {
     @extend .home--center;
-    margin: 12rem 0rem 10rem 0rem;
     font-size: 1.4rem;
     gap: 1rem;
     flex-wrap: wrap;
