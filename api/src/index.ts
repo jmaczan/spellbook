@@ -5,7 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import { Spell, SpellFiles } from './types';
 
-const spellsPath = path.join(path.resolve(__dirname, '../..'), '/registry/spells/');
+const spellsPath = path.join(path.resolve(__dirname, '../'), 'spells/');
 
 const getAllSpellsDirectories = () => fs.readdirSync(spellsPath);
 

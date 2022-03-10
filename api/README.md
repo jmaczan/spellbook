@@ -1,5 +1,15 @@
 # Spellbook API
 
+## heroku deployment
+```
+git subtree push --prefix api heroku main
+```
+
+## heroku debugging
+```
+heroku logs --tail
+```
+
 ## Common issues
 
 ### EADDRINUSE
