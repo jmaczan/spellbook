@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.scss';
+import { ScrollToTop } from './components/scroll-to-top/scroll-to-top';
 import { Navbar } from './components/navbar/navbar';
 import { Home } from './components/home/home';
 import { Install } from './components/install/install';
@@ -18,18 +19,20 @@ function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-        <Navbar onChange={setSpells} query={query} setQuery={setQuery} />
-        <div className='app__content'>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/install' element={<Install />} />
-            <Route path='/search' element={<Search spells={spells} query={query} />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/license' element={<License />} />
-            <Route path='/documentation' element={<Documentation />} />
-          </Routes>
-        </div>
-        <Footer />
+        <ScrollToTop>
+          <Navbar onChange={setSpells} query={query} setQuery={setQuery} />
+          <div className='app__content'>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/install' element={<Install />} />
+              <Route path='/search' element={<Search spells={spells} query={query} />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/license' element={<License />} />
+              <Route path='/documentation' element={<Documentation />} />
+            </Routes>
+          </div>
+          <Footer />
+        </ScrollToTop>
       </BrowserRouter>
     </div>
   );
