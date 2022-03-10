@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.scss';
-import { Navbar } from './components/navbar/Navbar';
+import { Navbar } from './components/navbar/navbar';
 import { Home } from './components/home/home';
-import { Install } from './components/install/Install';
+import { Install } from './components/install/install';
 import { Search } from './components/search/search';
-import { Footer } from './components/footer/Footer';
+import { Footer } from './components/footer/footer';
 import { Spell } from './components/spell-item/types';
 import { About } from './components/about/about';
 import { License } from './components/license/license';
