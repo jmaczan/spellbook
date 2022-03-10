@@ -1,21 +1,26 @@
 @import '../../common.scss';
 
-.about--center {
+.install--center {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column
 }
 
-.about {
-    @extend .about--center;
+.install {
+    @extend .install--center;
     margin: 12rem 0rem 10rem 0rem;
     font-size: 1.4rem;
     gap: 2rem;
     flex-wrap: wrap;
-    
+
     &__personal {
         font-size: 0.75rem;
     }
+
     text-align: center;
+}
+
+.install--alternative {
+    font-size: 1rem;
 }
