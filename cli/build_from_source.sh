@@ -5,4 +5,4 @@ rm -rf dist
 pip3 install python-dotenv
 pip3 install pyinstaller
 
-python3 -m PyInstaller --onefile spellbook.py
+python3 -m PyInstaller --onefile spell.py
