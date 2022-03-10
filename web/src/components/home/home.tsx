@@ -21,8 +21,8 @@ export const Home = () => (
       </div>
       <div className='howto__step__icon'>➡</div>
       <div className='howto__step__icon--mobile'>⬇</div>
+      <div className='howto__step'>Speak the spell</div>
       <div className='howto__step'>
-        Speak the spell&nbsp;&nbsp;
         <code className='howto__code'>
           <span className='howto__code__shell-prompt'>$</span> spell your-favourite-script
         </code>
