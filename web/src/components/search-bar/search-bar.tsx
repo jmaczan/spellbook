@@ -16,7 +16,7 @@ export const SearchBar = ({ query, onChange, setQuery }: SearchBarProps) => {
 
   useEffect(() => {
     !!query && location.pathname !== '/search' && navigate('/search');
-    fetch('http://localhost:8080/api/search?query=' + query)
+    fetch('https://spellbookapi.herokuapp.com/api/search?query=' + query)
       .then((response) => response.json())
       .then((response) => {
         onChange(response);
