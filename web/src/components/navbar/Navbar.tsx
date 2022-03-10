@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SearchBar } from '../search-bar/search-bar';
 import { Spell } from '../spell-item/types';
@@ -32,13 +32,20 @@ export const Navbar = ({ query, onChange, setQuery }: NavbarProps) => {
           <div className='navbar__subtitle'>Shell and Powershell scripts registry</div>
         </div>
         <div className='navbar__burger-menu' onClick={toggleMenuHandler}>
-          <div>
-            <svg viewBox='0 -25 25 100' width='35' height='30'>
-              <rect width='70' height='7' fill='#FDE74C'></rect>
-              <rect y='25' width='70' height='7' fill='#FDE74C'></rect>
-              <rect y='50' width='70' height='7' fill='#FDE74C'></rect>
+          {!isMenuToggled ? (
+            <div>
+              <svg viewBox='0 -25 25 100' width='35' height='30'>
+                <rect width='70' height='7' fill='#FDE74C'></rect>
+                <rect y='25' width='70' height='7' fill='#FDE74C'></rect>
+                <rect y='50' width='70' height='7' fill='#FDE74C'></rect>
+              </svg>
+            </div>
+          ) : (
+            <svg viewBox='0 -25 25 100' width='40' height='40' fill='#FDE74C' stroke='#FDE74C' strokeWidth='3'>
+              <line x1='40' y1='0' x2='0' y2='40'></line>
+              <line x1='0' y1='0' x2='40' y2='40'></line>
             </svg>
-          </div>
+          )}
         </div>
         <SearchBar onChange={onChange} query={query} setQuery={setQuery} />
       </div>
