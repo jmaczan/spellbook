@@ -8,9 +8,11 @@ interface NavbarProps {
   query: string;
   onChange: (value: Spell[]) => void;
   setQuery: (value: string) => void;
+  fetchingSpells: boolean;
+  setFetchingSpells: (fetching: boolean) => void;
 }
 
-export const Navbar = ({ query, onChange, setQuery }: NavbarProps) => {
+export const Navbar = ({ query, onChange, setQuery, fetchingSpells, setFetchingSpells }: NavbarProps) => {
   const [isMenuToggled, toggleMenu] = useState(false);
 
   const toggleMenuHandler = () => toggleMenu(!isMenuToggled);
@@ -47,7 +49,13 @@ export const Navbar = ({ query, onChange, setQuery }: NavbarProps) => {
             </svg>
           )}
         </div>
-        <SearchBar onChange={onChange} query={query} setQuery={setQuery} />
+        <SearchBar
+          onChange={onChange}
+          query={query}
+          setQuery={setQuery}
+          fetchingSpells={fetchingSpells}
+          setFetchingSpells={setFetchingSpells}
+        />
       </div>
       <div className='navbar__subtitle navbar__subtitle--mobile'>Shell and Powershell scripts registry</div>
       <div className='navbar__items-container'>

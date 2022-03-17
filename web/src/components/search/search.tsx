@@ -6,9 +6,18 @@ import { Spell } from '../spell-item/types';
 interface SearchProps {
   spells: Spell[];
   query: string;
+  fetching: boolean;
 }
 
-export const Search = ({ spells = [], query }: SearchProps) => {
+export const Search = ({ spells = [], query, fetching }: SearchProps) => {
+  if (fetching) {
+    return (
+      <section>
+        <div className='search__spells'>Fetching spells...</div>
+      </section>
+    );
+  }
+
   return (
     <section>
       <div className='search__spells'>

@@ -8,20 +8,27 @@ export interface SearchBarProps {
   query: string;
   onChange: (value: Spell[]) => void;
   setQuery: (value: string) => void;
+  fetchingSpells: boolean;
+  setFetchingSpells: (fetching: boolean) => void;
 }
 
-export const SearchBar = ({ query, onChange, setQuery }: SearchBarProps) => {
+export const SearchBar = ({ query, onChange, setQuery, setFetchingSpells }: SearchBarProps) => {
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
-    !!query && location.pathname !== '/search' && navigate('/search');
+    if (!query) {
+      return;
+    }
+
+    location.pathname !== '/search' && navigate('/search');
+    setFetchingSpells(true);
     fetch('https://spellbookapi.herokuapp.com/api/search?query=' + query)
       .then((response) => response.json())
       .then((response) => {
         onChange(response);
       });
-  }, [query, onChange]);
+  }, [query]);
 
   const searchForSpells = (text: ChangeEvent<HTMLInputElement>) => {
     setQuery(text?.target.value);
