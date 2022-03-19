@@ -18,10 +18,10 @@ export const Install = () => (
     <div>
       Add <code>spell</code> to <code>$PATH</code> variable{' '}
       <code>
-        <span className='spell-item__shell-prompt'>$</span> echo "export PATH=`pwd`:$PATH" &gt;&gt; ~/.bashrc | source
-        ~/.bashrc
+        <span className='spell-item__shell-prompt'>$</span> echo &quot;export PATH=`pwd`:$PATH&quot; &gt;&gt; ~/.bashrc
+        | source ~/.bashrc
       </code>{' '}
-      or put <code>spell</code> in folder that's already in <code>$PATH</code> variable{' '}
+      or put <code>spell</code> in folder that&apos;s already in <code>$PATH</code> variable{' '}
       <code>
         <span className='spell-item__shell-prompt'>$</span> sudo mv spell /usr/local/bin
       </code>
