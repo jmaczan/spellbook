@@ -1,10 +1,12 @@
 import React from 'react';
 import { ExternalLink } from '../external-link/external-link';
+import { InstallCard } from './install-card';
 import './install.scss';
 
 export const Install = () => (
   <section className='install'>
     <h1>Install</h1>
+    {/* <InstallCard icon='🐧' title='Linux' /> */}
     <div>
       The only step is to download a binary from{' '}
       <ExternalLink url='https://github.com/jmaczan/spellbook/releases/download/v0.0.1/spell'> here</ExternalLink>

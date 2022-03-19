@@ -1,0 +1,12 @@
+@import '../../common.scss';
+
+.install-card {
+    padding: 1.5rem;
+    border: 1px solid $secondary-accent;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.install-card__icon {
+    font-size: 3rem;
+}
