@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink } from '../external-link/external-link';
+// import { ExternalLink } from '../external-link/external-link';
 import './add.scss';
 
 export const AddScript = () => (
