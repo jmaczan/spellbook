@@ -1,6 +1,5 @@
 import React from 'react';
 import { ExternalLink } from '../external-link/external-link';
-import { InstallCard } from './install-card';
 import './install.scss';
 
 export const Install = () => (
