@@ -8,6 +8,7 @@
   @extend .text-transition;
   min-width: 100px;
   min-height: 100px;
+  text-align: center;
 
   &:hover {
     background-color: $secondary-background;

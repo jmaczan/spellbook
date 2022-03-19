@@ -1,20 +1,23 @@
 @import '../../common.scss';
 
 .license--center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .license {
-    @extend .license--center;
-    margin: 12rem 0rem 10rem 0rem;
-    font-size: 1.4rem;
-    gap: 1rem;
-    flex-wrap: wrap;
+  @extend .license--center;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 1rem;
+  gap: 4rem;
+  flex-wrap: wrap;
 
-    &__infrigement {
-        font-size: 1rem;
-    }
+  &__infrigement {
+    font-size: 1rem;
+  }
 }

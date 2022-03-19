@@ -20,6 +20,7 @@ export const Search = ({ spells = [], query, fetching }: SearchProps) => {
 
   return (
     <section>
+      <h1>Search</h1>
       <div className='search__spells'>
         {spells.map((spell) => (
           <SpellItem key={spell.name} spell={spell} />
@@ -30,9 +31,6 @@ export const Search = ({ spells = [], query, fetching }: SearchProps) => {
               'No spells found for your query 📚'
             ) : (
               <>
-                <div>
-                  <h1>Search</h1>
-                </div>
                 <div>Type your query in search bar above</div>
               </>
             )}

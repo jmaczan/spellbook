@@ -1,33 +1,31 @@
 @import '../../common.scss';
 
 .install--center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .install {
-    @extend .install--center;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    font-size: 1rem;
-    gap: 4rem;
-    flex-wrap: wrap;
+  @extend .install--center;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 1rem;
+  gap: 4rem;
+  flex-wrap: wrap;
 
-    &__personal {
-        font-size: 0.75rem;
-    }
+  &__personal {
+    font-size: 0.75rem;
+  }
 
-    text-align: center;
-
-    &__instruction {
-        line-height: 2rem;
-    }
+  &__instruction {
+    line-height: 2rem;
+  }
 }
 
 .install--alternative {
-    font-size: 1rem;
+  font-size: 1rem;
 }

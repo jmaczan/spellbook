@@ -1,21 +1,23 @@
 @import '../../common.scss';
 
 .documentation--center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .documentation {
-    @extend .documentation--center;
-    margin: 12rem 0rem 10rem 0rem;
-    font-size: 1.4rem;
-    gap: 1rem;
-    flex-wrap: wrap;
+  @extend .documentation--center;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 1rem;
+  gap: 4rem;
+  flex-wrap: wrap;
 }
 
 .documentation__item {
-    font-size: 1rem;
+  font-size: 1rem;
 }
