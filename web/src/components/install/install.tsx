@@ -1,20 +1,38 @@
 import React from 'react';
 import { ExternalLink } from '../external-link/external-link';
+import { InstallCard } from './install-card';
 import './install.scss';
 
 export const Install = () => (
   <section className='install'>
     <h1>Install</h1>
-    {/* <InstallCard icon='🐧' title='Linux' /> */}
+    <ExternalLink url='https://github.com/jmaczan/spellbook/releases/download/v0.0.1/spell'>
+      <InstallCard icon='🐧' title='Linux' />
+    </ExternalLink>
     <div>
-      The only step is to download a binary from{' '}
-      <ExternalLink url='https://github.com/jmaczan/spellbook/releases/download/v0.0.1/spell'> here</ExternalLink>
+      Make <code>spell</code> executable{' '}
+      <code>
+        <span className='spell-item__shell-prompt'>$</span> chmod +x spell
+      </code>
     </div>
-    <div>Once you download the program, run it in your favourite terminal</div>
+    <div>
+      Add <code>spell</code> to <code>$PATH</code> variable{' '}
+      <code>
+        <span className='spell-item__shell-prompt'>$</span> echo "export PATH=`pwd`:$PATH" &gt;&gt; ~/.bashrc | source
+        ~/.bashrc
+      </code>{' '}
+      or put <code>spell</code> in folder that's already in <code>$PATH</code> variable{' '}
+      <code>
+        <span className='spell-item__shell-prompt'>$</span> sudo mv spell /usr/local/bin
+      </code>
+    </div>
+    <div>
+      Done! Ready to make the magic happen{' '}
+      <code className='spell-item__example'>
+        <span className='spell-item__shell-prompt'>$</span> spell repeat-sh 5 ls -no-clean
+      </code>
+    </div>
+
     <div></div>
-    <div className='install--alternative'>
-      Alternatively, you can build it from the source. The repository is{' '}
-      <ExternalLink url='https://github.com/jmaczan/spellbook/tree/main/cli'> here</ExternalLink>
-    </div>
   </section>
 );

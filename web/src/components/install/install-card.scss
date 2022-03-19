@@ -1,12 +1,32 @@
 @import '../../common.scss';
 
 .install-card {
-    padding: 1.5rem;
-    border: 1px solid $secondary-accent;
-    border-radius: 3px;
-    cursor: pointer;
-}
+  padding: 1.5rem;
+  border: 1px solid $secondary-accent;
+  border-radius: 3px;
+  cursor: pointer;
+  @extend .text-transition;
+  min-width: 100px;
+  min-height: 100px;
 
-.install-card__icon {
+  &:hover {
+    background-color: $secondary-background;
+
+    .install-card__title {
+      color: $secondary-accent;
+    }
+  }
+
+  &__icon {
     font-size: 3rem;
+
+    &-container {
+      padding: 1rem 0;
+    }
+  }
+
+  &__title {
+    font-size: 1rem;
+    font-weight: 600;
+  }
 }

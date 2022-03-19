@@ -9,7 +9,9 @@ interface InstallCardProps {
 
 export const InstallCard = ({ icon, title, children }: InstallCardProps) => (
   <div className='install-card'>
-    <div className='install-card__icon'>{icon}</div>
+    <div className='install-card__icon-container'>
+      <span className='install-card__icon'>{icon}</span>
+    </div>
     <div className='install-card__title'>{title}</div>
     {children}
   </div>
