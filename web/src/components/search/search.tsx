@@ -10,33 +10,29 @@ interface SearchProps {
 }
 
 export const Search = ({ spells = [], query, fetching }: SearchProps) => {
-  if (fetching) {
-    return (
-      <section>
-        <div className='search__spells'>Fetching spells...</div>
-      </section>
-    );
-  }
-
   return (
     <section>
       <h1>Search</h1>
-      <div className='search__spells'>
-        {spells.map((spell) => (
-          <SpellItem key={spell.name} spell={spell} />
-        ))}
-        {spells.length === 0 ? (
-          <div className='search__not-found'>
-            {!!query && query !== '' ? (
-              'No spells found for your query 📚'
-            ) : (
-              <>
-                <div>Type your query in search bar above</div>
-              </>
-            )}
-          </div>
-        ) : null}
-      </div>
+      {fetching ? (
+        <div className='search__not-found'>Fetching spells... 🌏</div>
+      ) : (
+        <div className='search__spells'>
+          {spells.map((spell) => (
+            <SpellItem key={spell.name} spell={spell} />
+          ))}
+          {spells.length === 0 ? (
+            <div className='search__not-found'>
+              {!!query && query !== '' ? (
+                'No spells found for your query 📚'
+              ) : (
+                <>
+                  <div>Type your query in search bar above ⌨️</div>
+                </>
+              )}
+            </div>
+          ) : null}
+        </div>
+      )}
     </section>
   );
 };
