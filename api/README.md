@@ -1,5 +1,17 @@
 # Spellbook API
 
+## install heroku
+https://devcenter.heroku.com/articles/heroku-cli
+On Ubuntu:
+```
+sudo snap install --classic heroku
+```
+
+## set git
+```
+heroku git:remote -a spellbookapi
+```
+
 ## heroku deployment
 ```
 git subtree push --prefix api heroku main
