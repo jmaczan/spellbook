@@ -23,7 +23,7 @@ export const SearchBar = ({ query, onChange, setQuery, setFetchingSpells }: Sear
 
     location.pathname !== '/search' && navigate('/search');
     setFetchingSpells(true);
-    fetch('https://spellbookapi.herokuapp.com/api/search?query=' + query)
+    fetch('https://spellbookapi.herokuapp.com/api/spell/search?query=' + query)
       .then((response) => response.json())
       .then((response) => {
         onChange(response);
