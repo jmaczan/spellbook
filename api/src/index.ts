@@ -4,6 +4,7 @@ import cors from 'cors';
 import fs from 'fs';
 import path from 'path';
 import { Spell, SpellFiles } from './types';
+import { exit } from 'process';
 
 const spellsPath = path.join(path.resolve(__dirname, '../'), 'spells/');
 
@@ -136,6 +137,12 @@ app.get('/api/spell', (req, res) => {
     res.send([]);
   }
 });
+
+if (!process.env.HOST || !process.env.PORT) {
+  !process.env.PORT && console.log('Please define PORT in .env file');
+  !process.env.HOST && console.log('Please define HOST in .env file');
+  exit(1);
+}
 
 app.listen(process.env.PORT, () => {
   console.log(`server running : http://${process.env.HOST}:${process.env.PORT}`);
