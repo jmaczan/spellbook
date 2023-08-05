@@ -11,8 +11,8 @@ from dotenv import dotenv_values
 config = dotenv_values(".env")
 
 
-API = config["API_PROTOCOL"] + config["API_URL"] + \
-    ('' if "API_PORT" not in config else ':' + config["API_PORT"])
+API = config.get("API_PROTOCOL", '') + config.get("API_URL", '') + \
+    ('' if "API_PORT" not in config else ':' + config.get("API_PORT", ''))
 
 
 def menu():
