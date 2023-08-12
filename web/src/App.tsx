@@ -5,7 +5,6 @@ import { ScrollToTop } from './components/scroll-to-top/scroll-to-top';
 import { Navbar } from './components/navbar/navbar';
 import { Home } from './components/home/home';
 import { Install } from './components/install/install';
-import { Search } from './components/search/search';
 import { Footer } from './components/footer/footer';
 import { Spell } from './components/spell-item/types';
 import { About } from './components/about/about';
@@ -13,6 +12,7 @@ import { License } from './components/license/license';
 import { Documentation } from './components/documentation/documentation';
 import { AddScript } from './components/add/add';
 import { SpellPage } from './components/spell/spell-page';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   const [spells, setSpells] = useState<Spell[]>([]);
@@ -44,6 +44,7 @@ function App() {
             fetchingSpells={fetchingSpells}
             setFetchingSpells={setFetchingSpells}
           />
+          <div><Toaster/></div>
           <div className='app__content'>
             <Routes>
               <Route path='/' element={<Home />} />

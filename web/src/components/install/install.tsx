@@ -1,6 +1,7 @@
 import React from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { ExternalLink } from '../external-link/external-link';
+import { onCopy } from '../toast/copy';
 import { InstallCard } from './install-card';
 import './install.scss';
 
@@ -30,7 +31,7 @@ export const Install = () => (
       </div>
       <div>
         Done! Ready to make the magic happen{' '}
-        <CopyToClipboard text={"spell repeat-sh 5 ls -no-clean"}><code className='spell-item__example'>
+        <CopyToClipboard onCopy={onCopy} text={"spell repeat-sh 5 ls -no-clean"}><code className='spell-item__example'>
           <span className='spell-item__shell-prompt'>$</span> spell repeat-sh 5 ls -no-clean
         </code></CopyToClipboard>
       </div>
