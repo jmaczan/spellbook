@@ -63,9 +63,6 @@ export const Navbar = ({ query, onChange, setQuery, fetchingSpells, setFetchingS
           <Link to='/install'>
             <li className='navbar__item'>Install</li>
           </Link>
-          <Link to='/spell'>
-            <li className='navbar__item'>Search</li>
-          </Link>
           <Link to='/documentation'>
             <li className='navbar__item'>Documentation</li>
           </Link>
@@ -78,9 +75,6 @@ export const Navbar = ({ query, onChange, setQuery, fetchingSpells, setFetchingS
         <ul className='navbar__items navbar__items-container--mobile'>
           <Link to='/install' onClick={closeMenu}>
             <li className='navbar__item'>Install</li>
-          </Link>
-          <Link to='/spell' onClick={closeMenu}>
-            <li className='navbar__item'>Search</li>
           </Link>
           <Link to='/documentation' onClick={closeMenu}>
             <li className='navbar__item'>Documentation</li>
