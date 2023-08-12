@@ -18,15 +18,16 @@ export const getSpellsRoutes = () => {
     }
   });
 
-  router.get('/get', (req, res) => {
+  router.get('/get', async (req, res) => {
     res.setHeader('Content-Type', 'application/json');
     const clearedQuery = clearQuery(req.query?.query.toString());
 
     if (clearedQuery.result === PossibleResult.Ok) {
-      res.send(JSON.stringify(getSpell(clearedQuery.value)));
+      const spell = await getSpell(clearedQuery.value);
+      res.send(JSON.stringify(spell));
     } else {
       res.statusCode = 400;
-      res.send([]);
+      res.send({});
     }
   });
 
