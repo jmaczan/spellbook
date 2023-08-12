@@ -63,7 +63,7 @@ export const Navbar = ({ query, onChange, setQuery, fetchingSpells, setFetchingS
           <Link to='/install'>
             <li className='navbar__item'>Install</li>
           </Link>
-          <Link to='/search'>
+          <Link to='/spell'>
             <li className='navbar__item'>Search</li>
           </Link>
           <Link to='/documentation'>
@@ -79,7 +79,7 @@ export const Navbar = ({ query, onChange, setQuery, fetchingSpells, setFetchingS
           <Link to='/install' onClick={closeMenu}>
             <li className='navbar__item'>Install</li>
           </Link>
-          <Link to='/search' onClick={closeMenu}>
+          <Link to='/spell' onClick={closeMenu}>
             <li className='navbar__item'>Search</li>
           </Link>
           <Link to='/documentation' onClick={closeMenu}>

@@ -19,8 +19,12 @@ export const SpellItem = ({ spell }: SpellItemProps) => (
         <span className='spell-item__shell-prompt'>$</span> spell {spell.example}
       </code></>
     ) : null}
-      Learn:&nbsp;<code className='spell-item__example'>
+      Learn using cli:&nbsp;<code className='spell-item__example'>
         <span className='spell-item__shell-prompt'>$</span> spell learn {spell.name}
+      </code>
+      Run without spell cli:&nbsp;
+      <code className='spell-item__example'>
+        <span className='spell-item__shell-prompt'>$</span> curl {process.env.REACT_APP_REGISTRY_URL}{spell.name}/spell.sh | sh {spell.example ? `-s ${spell.example}` : ''}
       </code>
     <div className='spell-item__bottom'>
       {spell.license ? (

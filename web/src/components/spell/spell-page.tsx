@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { SpellItem } from '../spell-item/spell-item';
-import './search.scss';
+import './spell-page.scss';
 import { Spell } from '../spell-item/types';
 import { useLocation } from 'react-router-dom';
 
@@ -11,11 +11,11 @@ interface SearchProps {
   setQuery: (value: string) => void;
 }
 
-export const Search = ({ spells = [], query, setQuery, fetching }: SearchProps) => {
+export const SpellPage = ({ spells = [], query, setQuery, fetching }: SearchProps) => {
   const location = useLocation();
   
   useEffect(() => {
-    const spell =  location?.pathname?.slice?.(8);
+    const spell =  location?.pathname?.slice?.(7);
     if (spell && query !== spell) {
       setQuery(spell);
     }

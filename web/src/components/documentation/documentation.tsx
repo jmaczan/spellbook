@@ -9,7 +9,7 @@ export const Documentation = () => (
       <Link to='/install'>Install</Link> spellbook cli app
     </div>
     <div className='documentation__item'>
-      <Link to='/search'>Browse the spellbook</Link> and find a useful script
+      <Link to='/spell'>Browse the spellbook</Link> and find a useful script
     </div>
     <div className='documentation__item'>Use cli app to run scripts</div>
     <div className='documentation__item'>Currently available commands:</div>

@@ -21,7 +21,7 @@ export const SearchBar = ({ query, onChange, setQuery, setFetchingSpells }: Sear
       return;
     }
 
-    location.pathname !== '/search' && navigate('/search');
+    location.pathname !== '/spell' && navigate(`/spell/${query}`);
     setFetchingSpells(true);
     fetch(`${process.env.REACT_APP_REGISTRY_URL}${query}/spell.json`)
       .then((response) => response.json())
