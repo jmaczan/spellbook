@@ -7,8 +7,8 @@ from dotenv import dotenv_values
 
 config = dotenv_values(".env")
 
-API = config["API_PROTOCOL"] + config["API_URL"] + \
-    ('' if "API_PORT" not in config else ':' + config["API_PORT"])
+API = config.get("API_PROTOCOL", '') + config.get("API_URL", '') + \
+    ('' if "API_PORT" not in config else ':' + config.get("API_PORT", ''))
 
 
 def add_spell(spell_name):
@@ -30,7 +30,7 @@ def add_spell(spell_name):
 
 def fetch_spell(spell_name):
     return json.loads(requests.get(
-        API + '/api/spell?name=' + spell_name).text)
+        API + '/api/spell/get?name=' + spell_name).text)
 
 
 def does_spell_exist(spell_name):

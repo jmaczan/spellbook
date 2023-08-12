@@ -18,7 +18,7 @@ export const Documentation = () => (
         Show installed scripts - <code>spell list</code>
       </li>
       <li className='documentation__item'>
-        Add a script from repository - <code>spell learn</code>
+        Add a script from repository - <code>spell learn &lt;script name&gt;</code>
       </li>
       <li className='documentation__item'>
         Run a script - <code>spell &lt;script name&gt; [parameters]</code>

@@ -22,7 +22,7 @@ def menu():
 
 
 def to_be_implemented(command):
-    print('to be implemented: %s' % command)
+    print('%s' % command)
 
 
 def run_command(command, arguments=[]):

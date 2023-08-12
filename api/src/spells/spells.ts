@@ -14,7 +14,7 @@ export const searchForSpells = (query: string) =>
             (spellFile) => spellsPath + spellDirectory + '/' + spellFile,
           ),
         )
-        .filter((spellFile) => spellFile.includes('.json'))
+        .filter((spellFile) => spellFile.endsWith('.json'))
         .map((spellFile) => JSON.parse(fs.readFileSync(spellFile, 'utf-8')))
         .filter((spell) => spell.name.includes(query)) ?? []
     : [];
