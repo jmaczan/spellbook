@@ -11,10 +11,6 @@ from dotenv import dotenv_values
 config = dotenv_values(".env")
 
 
-API = config.get("API_PROTOCOL", '') + config.get("API_URL", '') + \
-    ('' if "API_PORT" not in config else ':' + config.get("API_PORT", ''))
-
-
 def menu():
     ensure_spellbook_directory_existence()
     (command, arguments) = parse_cli_command_arguments(argv)
