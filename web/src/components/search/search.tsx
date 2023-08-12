@@ -17,7 +17,7 @@ export const Search = ({ spells = [], query, setQuery, fetching }: SearchProps) 
   useEffect(() => {
     const spell =  location?.pathname?.slice?.(8);
     if (spell && query !== spell) {
-      setQuery(spell);
+      setQuery(spell.toLocaleLowerCase());
     }
   }, [location?.pathname]);
 

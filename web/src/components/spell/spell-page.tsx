@@ -17,7 +17,7 @@ export const SpellPage = ({ spells = [], query, setQuery, fetching }: SearchProp
   useEffect(() => {
     const spell =  location?.pathname?.slice?.(7);
     if (spell && query !== spell) {
-      setQuery(spell);
+      setQuery(spell?.toLocaleLowerCase());
     }
   }, [location?.pathname]);
 

@@ -34,7 +34,7 @@ export const SearchBar = ({ query, onChange, setQuery, setFetchingSpells }: Sear
   }, [query]);
 
   const searchForSpells = (text: ChangeEvent<HTMLInputElement>) => {
-    setQuery(text?.target.value);
+    setQuery(text?.target.value?.toLocaleLowerCase());
   };
 
   return (
