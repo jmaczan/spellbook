@@ -23,7 +23,7 @@ export const SpellPage = ({ spells = [], query, setQuery, fetching }: SearchProp
 
   return (
     <section>
-      <h1>Search</h1>
+      <h1>{spells.length === 0 || fetching ? 'Search' : 'Spell'}</h1>
       {fetching ? (
         <div className='search__not-found'>Fetching spells... 🌏</div>
       ) : (
