@@ -1,6 +1,7 @@
 import React from 'react';
 import { Spell } from './types';
 import './spell-item.scss';
+import { ExternalLink } from '../external-link/external-link';
 
 interface SpellItemProps {
   spell: Spell;
@@ -27,6 +28,7 @@ export const SpellItem = ({ spell }: SpellItemProps) => (
         <span className='spell-item__shell-prompt'>$</span> curl {process.env.REACT_APP_REGISTRY_URL}{spell.name}/spell.sh | sh {spell.example ? `-s ${spell.example}` : ''}
       </code>
     <div className='spell-item__bottom'>
+    <ExternalLink url={`${process.env.REACT_APP_REGISTRY_URL}${spell.name}/spell.sh`}>Source code</ExternalLink> <Separator />
       {spell.license ? (
         <span className='spell-item__license'>
           {spell.license}
