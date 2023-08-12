@@ -27,6 +27,9 @@ export const SearchBar = ({ query, onChange, setQuery, setFetchingSpells }: Sear
       .then((response) => response.json())
       .then((response) => {
         onChange(response);
+      })
+      .catch((err) => {
+        onChange(undefined)
       });
   }, [query]);
 

@@ -20,6 +20,9 @@ function App() {
 
   const onChange = useCallback(
     (spell: Spell) => {
+      if (!spell) {
+        setSpells([]);
+      }
       setSpells([spell]);
       setFetchingSpells(false);
     },
