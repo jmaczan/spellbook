@@ -2,6 +2,7 @@ import React from 'react';
 import { Spell } from './types';
 import './spell-item.scss';
 import { ExternalLink } from '../external-link/external-link';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 interface SpellItemProps {
   spell: Spell;
@@ -16,17 +17,17 @@ export const SpellItem = ({ spell }: SpellItemProps) => (
     </div>{' '}
     <div className='spell-item__description'>{spell.description}</div>
     {spell.example ? (
-      <>Example:&nbsp;<code className='spell-item__example'>
-        <span className='spell-item__shell-prompt'>$</span> spell {spell.example}
-      </code></>
+      <>Example:&nbsp;<CopyToClipboard text={`spell ${spell.name} ${spell.example}`}><code className='spell-item__example'>
+        <span className='spell-item__shell-prompt'>$</span> spell {spell.name} {spell.example}
+      </code></CopyToClipboard></>
     ) : null}
-      Learn using cli:&nbsp;<code className='spell-item__example'>
+      Learn using cli:&nbsp;<CopyToClipboard text={`spell learn ${spell.name}`}><code className='spell-item__example'>
         <span className='spell-item__shell-prompt'>$</span> spell learn {spell.name}
-      </code>
+      </code></CopyToClipboard>
       Run without spell cli:&nbsp;
-      <code className='spell-item__example'>
+      <CopyToClipboard text={`curl ${process.env.REACT_APP_REGISTRY_URL}${spell.name}/spell.sh | sh ${spell.example ? `-s ${spell.example}` : ''}`}><code className='spell-item__example'>
         <span className='spell-item__shell-prompt'>$</span> curl {process.env.REACT_APP_REGISTRY_URL}{spell.name}/spell.sh | sh {spell.example ? `-s ${spell.example}` : ''}
-      </code>
+      </code></CopyToClipboard>
     <div className='spell-item__bottom'>
     <ExternalLink url={`${process.env.REACT_APP_REGISTRY_URL}${spell.name}/spell.sh`}>Source code</ExternalLink> <Separator />
       {spell.license ? (
