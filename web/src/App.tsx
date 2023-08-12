@@ -19,8 +19,8 @@ function App() {
   const [fetchingSpells, setFetchingSpells] = useState<boolean>(false);
 
   const onChange = useCallback(
-    (spells: Spell[]) => {
-      setSpells(spells);
+    (spell: Spell) => {
+      setSpells([spell]);
       setFetchingSpells(false);
     },
     [spells],

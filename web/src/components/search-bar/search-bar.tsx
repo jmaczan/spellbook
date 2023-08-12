@@ -6,7 +6,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 export interface SearchBarProps {
   query: string;
-  onChange: (value: Spell[]) => void;
+  onChange: (value: Spell) => void;
   setQuery: (value: string) => void;
   fetchingSpells: boolean;
   setFetchingSpells: (fetching: boolean) => void;
