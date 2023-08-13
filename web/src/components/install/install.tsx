@@ -9,10 +9,10 @@ export const Install = () => (
   <section className='install'>
     <h1>Install</h1>
     <div className='install__links'>
-    <ExternalLink url='https://github.com/jmaczan/spellbook/releases/download/v0.0.1/spell'>
+    <ExternalLink url='https://github.com/jmaczan/spellbook/releases/download/v0.0.2/spell'>
       <InstallCard icon='🐧' title='Linux' />
     </ExternalLink>
-    <ExternalLink url='https://github.com/jmaczan/spellbook/releases/download/v0.0.1/spell'>
+    <ExternalLink url='https://github.com/jmaczan/spellbook/releases/download/v0.0.2/spell'>
       <InstallCard icon='' title='macOS' />
     </ExternalLink>
     </div>
