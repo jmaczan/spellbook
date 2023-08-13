@@ -83,7 +83,7 @@ Python scripts for Registry
 
 Free to use for non-commercial usage
 
-For commercial, pay $10 per year per user - [BUY HERE](https://spellbook.maczan.pl/pricing)
+For commercial, pay $10 per year per user - [buy here](https://spellbook.maczan.pl/pricing)
 
 ## Author
 
