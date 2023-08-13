@@ -22,6 +22,10 @@
 
   &__instruction {
     line-height: 2rem;
+
+    code {
+      cursor: pointer;
+    }
   }
 }
 

@@ -1,5 +1,7 @@
 import React from 'react';
+import CopyToClipboard from 'react-copy-to-clipboard';
 import { Link } from 'react-router-dom';
+import { onCopy } from '../toast/copy';
 import './documentation.scss';
 
 export const Documentation = () => (
@@ -15,16 +17,16 @@ export const Documentation = () => (
     <div className='documentation__item'>Currently available commands:</div>
     <ol>
       <li className='documentation__item'>
-        Show installed scripts - <code>spell list</code>
+        Show installed scripts - <CopyToClipboard onCopy={onCopy} text={"spell list"}><code>spell list</code></CopyToClipboard>
       </li>
       <li className='documentation__item'>
-        Add a script from repository - <code>spell learn &lt;script name&gt;</code>
+        Add a script from repository - <CopyToClipboard onCopy={onCopy} text={"spell learn <script name>"}><code>spell learn &lt;script name&gt;</code></CopyToClipboard>
       </li>
       <li className='documentation__item'>
-        Run a script - <code>spell &lt;script name&gt; [parameters]</code>
+        Run a script - <CopyToClipboard onCopy={onCopy} text={"spell <script name> [parameters]"}><code>spell &lt;script name&gt; [parameters]</code></CopyToClipboard>
       </li>
       <li className='documentation__item'>
-        Remove a script - <code>spell forget &lt;script name&gt;</code>
+        Remove a script - <CopyToClipboard onCopy={onCopy} text={"spell forget <script name>"}><code>spell forget &lt;script name&gt;</code></CopyToClipboard>
       </li>
     </ol>
   </section>

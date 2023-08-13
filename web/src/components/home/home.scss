@@ -50,6 +50,7 @@
 .howto__code {
     font-size: 1.2rem;
     padding: 0.75rem 1rem;
+    cursor: pointer;
 }
 
 .home__description {
@@ -58,6 +59,7 @@
 
 .howto__code__shell-prompt {
     @extend .secondary-accent-text;
+    cursor: pointer;
 }
 
 @media (max-width: $mobile) {

@@ -13,21 +13,21 @@ export const Install = () => (
     </ExternalLink>
     <div className='install__instruction'>
       <div>
-        Make <code>spell</code> executable{' '}
-        <code>
+        Make <CopyToClipboard onCopy={onCopy} text={"spell"}><code>spell</code></CopyToClipboard> executable{' '}
+        <CopyToClipboard onCopy={onCopy} text={"chmod +x spell"}><code>
           <span className='spell-item__shell-prompt'>$</span> chmod +x spell
-        </code>
+        </code></CopyToClipboard>
       </div>
       <div>
-        Add <code>spell</code> to <code>$PATH</code> variable{' '}
-        <code>
+        Add <CopyToClipboard onCopy={onCopy} text={"spell"}><code>spell</code></CopyToClipboard> to <CopyToClipboard onCopy={onCopy} text={"$PATH"}><code>$PATH</code></CopyToClipboard> variable{' '}
+        <CopyToClipboard onCopy={onCopy} text={'echo "export PATH=`pwd`:$PATH" >> ~/.bashrc | source ~/.bashrc'}><code>
           <span className='spell-item__shell-prompt'>$</span> echo &quot;export PATH=`pwd`:$PATH&quot; &gt;&gt;
           ~/.bashrc | source ~/.bashrc
-        </code>{' '}
-        or put <code>spell</code> in folder that&apos;s already in <code>$PATH</code> variable{' '}
-        <code>
+        </code></CopyToClipboard>{' '}
+        or put <CopyToClipboard onCopy={onCopy} text={"spell"}><code>spell</code></CopyToClipboard> in folder that&apos;s already in <CopyToClipboard onCopy={onCopy} text={"$PATH"}><code>$PATH</code></CopyToClipboard> variable{' '}
+        <CopyToClipboard onCopy={onCopy} text={"sudo mv spell /usr/local/bin"}><code>
           <span className='spell-item__shell-prompt'>$</span> sudo mv spell /usr/local/bin
-        </code>
+        </code></CopyToClipboard>
       </div>
       <div>
         Done! Ready to make the magic happen{' '}

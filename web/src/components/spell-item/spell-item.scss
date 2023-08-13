@@ -38,4 +38,5 @@
 
 .spell-item__shell-prompt {
     @extend .secondary-accent-text;
+    cursor: pointer;
 }
