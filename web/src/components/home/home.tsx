@@ -34,7 +34,7 @@ export const Home = () => (
     </div>
     <div className='home__target'>
       <span>
-        For <span className='secondary-accent-text'>Linux</span> 🐧
+        For <span className='secondary-accent-text'>Linux 🐧</span> and <span className='secondary-accent-text'>macOS </span>
       </span>
     </div>
   </section>

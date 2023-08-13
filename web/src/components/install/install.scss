@@ -27,6 +27,12 @@
       cursor: pointer;
     }
   }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
 }
 
 .install--alternative {

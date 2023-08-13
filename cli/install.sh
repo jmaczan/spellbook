@@ -3,4 +3,4 @@
 cd dist/
 chmod +x spell
 sudo mv spell /usr/local/bin
-spell list
+spell installed-successfully

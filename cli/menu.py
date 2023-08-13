@@ -34,6 +34,8 @@ def run_command(command, arguments=[]):
         to_be_implemented(command)
     elif command == "about" or command == "a":
         to_be_implemented(command)
+    elif command == "installed-successfully":
+        print("Spellbook installed successfully!")
     elif command == "":
         to_be_implemented(command)
     else:

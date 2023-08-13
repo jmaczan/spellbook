@@ -8,9 +8,14 @@ import './install.scss';
 export const Install = () => (
   <section className='install'>
     <h1>Install</h1>
+    <div className='install__links'>
     <ExternalLink url='https://github.com/jmaczan/spellbook/releases/download/v0.0.1/spell'>
       <InstallCard icon='🐧' title='Linux' />
     </ExternalLink>
+    <ExternalLink url='https://github.com/jmaczan/spellbook/releases/download/v0.0.1/spell'>
+      <InstallCard icon='' title='macOS' />
+    </ExternalLink>
+    </div>
     <div className='install__instruction'>
       <div>
         Make <CopyToClipboard onCopy={onCopy} text={"spell"}><code>spell</code></CopyToClipboard> executable{' '}
