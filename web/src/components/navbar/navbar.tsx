@@ -60,27 +60,33 @@ export const Navbar = ({ query, onChange, setQuery, fetchingSpells, setFetchingS
       <div className='navbar__subtitle navbar__subtitle--mobile'>Shell and Powershell scripts registry</div>
       <div className='navbar__items-container'>
         <ul className='navbar__items'>
+        <Link to='/pricing'>
+            <li className='navbar__item'>Pricing</li>
+          </Link>
           <Link to='/install'>
             <li className='navbar__item'>Install</li>
           </Link>
           <Link to='/documentation'>
-            <li className='navbar__item'>Documentation</li>
+            <li className='navbar__item'>Docs</li>
           </Link>
           <Link to='/add'>
-            <li className='navbar__item'>📤&nbsp;&nbsp;Add</li>
+            <li className='navbar__item'>Add script&nbsp;&nbsp;📤</li>
           </Link>
         </ul>
       </div>
       {isMenuToggled ? (
         <ul className='navbar__items navbar__items-container--mobile'>
+          <Link to='/pricing'>
+            <li className='navbar__item'>Pricing</li>
+          </Link>
           <Link to='/install' onClick={closeMenu}>
             <li className='navbar__item'>Install</li>
           </Link>
           <Link to='/documentation' onClick={closeMenu}>
-            <li className='navbar__item'>Documentation</li>
+            <li className='navbar__item'>Docs</li>
           </Link>
           <Link to='/add' onClick={closeMenu}>
-            <li className='navbar__item'>📤&nbsp;&nbsp;Add</li>
+            <li className='navbar__item'>📤&nbsp;&nbsp;Upload script</li>
           </Link>
         </ul>
       ) : null}

@@ -13,6 +13,7 @@ import { Documentation } from './components/documentation/documentation';
 import { AddScript } from './components/add/add';
 import { SpellPage } from './components/spell/spell-page';
 import { Toaster } from 'react-hot-toast';
+import { Pricing } from './components/pricing/pricing';
 
 function App() {
   const [spells, setSpells] = useState<Spell[]>([]);
@@ -51,6 +52,7 @@ function App() {
               <Route path='/install' element={<Install />} />
               <Route path='/spell/:spell' element={<SpellPage spells={spells} query={query} setQuery={setQuery} fetching={fetchingSpells} />} />
               <Route path='/about' element={<About />} />
+              <Route path='/pricing' element={<Pricing />} />
               <Route path='/license' element={<License />} />
               <Route path='/documentation' element={<Documentation />} />
               <Route path='/add' element={<AddScript />} />
