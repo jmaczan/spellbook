@@ -1,2 +1,4 @@
-spellbook_path = '/opt/spellbook/'
-spellbook_symlink_path = '/usr/local/bin/spellbook'
+from os import path
+
+
+spellbook_path = path.expanduser('~/.spellbook')
