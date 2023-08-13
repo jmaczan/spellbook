@@ -13,9 +13,9 @@ const Separator = () => <span className='spell-item__separator'> ∙ </span>;
 
 export const SpellItem = ({ spell }: SpellItemProps) => (
   <div className='spell-item'>
-    <div className='spell-item__title'>
+    <ExternalLink url={`https://github.com/jmaczan/spellbook/tree/main/registry/spells/${spell.name}/spell.sh`}><div className='spell-item__title'>
       {randomSpellIcon()} {spell.title} ({spell.name})
-    </div>{' '}
+    </div></ExternalLink>{' '}
     <div className='spell-item__description'>{spell.description}</div>
     {spell.example ? (
       <>Example:&nbsp;<CopyToClipboard onCopy={onCopy} text={`spell ${spell.name} ${spell.example}`}><code className='spell-item__example'>
