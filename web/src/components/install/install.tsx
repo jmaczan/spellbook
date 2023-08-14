@@ -3,6 +3,7 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 import { ExternalLink } from '../external-link/external-link';
 import { onCopy } from '../toast/copy';
 import { InstallCard } from './install-card';
+import { FaApple, FaLinux } from "react-icons/fa";
 import './install.scss';
 
 export const Install = () => (
@@ -10,10 +11,10 @@ export const Install = () => (
     <h1>Install</h1>
     <div className='install__links'>
     <ExternalLink url='https://github.com/jmaczan/spellbook/releases/download/v0.0.2/spell'>
-      <InstallCard icon='🐧' title='Linux' />
+      <InstallCard icon={<FaLinux />} title='Linux' />
     </ExternalLink>
     <ExternalLink url='https://github.com/jmaczan/spellbook/releases/download/v0.0.2/spell'>
-      <InstallCard icon='' title='macOS' />
+      <InstallCard icon={<FaApple />} title='macOS' />
     </ExternalLink>
     </div>
     <div className='install__instruction'>

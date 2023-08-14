@@ -2,6 +2,7 @@ import React from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { Link } from 'react-router-dom';
 import { onCopy } from '../toast/copy';
+import { FaApple, FaLinux } from "react-icons/fa";
 import './home.scss';
 
 export const Home = () => (
@@ -34,7 +35,7 @@ export const Home = () => (
     </div>
     <div className='home__target'>
       <span>
-        For <span className='secondary-accent-text'>Linux 🐧</span> and <span className='secondary-accent-text'>macOS </span>
+        For <span className='secondary-accent-text'>Linux <FaLinux /></span> and <span className='secondary-accent-text'>macOS <FaApple /></span>
       </span>
     </div>
   </section>

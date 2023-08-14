@@ -2,7 +2,7 @@ import React from 'react';
 import './install-card.scss';
 
 interface InstallCardProps {
-  icon: string;
+  icon: React.ReactElement;
   title: string;
   children?: React.ReactNode;
 }
